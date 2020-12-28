@@ -9,7 +9,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 export interface AddFieldProps {
     /**
-        * A preencher
+        * A 
     */
     onAddClick?: any,
     /**
@@ -82,9 +82,9 @@ const AddField = ({ onChangeTextfield, colorOfTheButton, onAddClick, disableButt
                         />
                     </Grid>
                     <Grid item>
-                        <Button id="buttonAddTreatments" 
+                        <Button id="buttonAddTreatments"
                             color={colorOfTheButton}
-                            variant="contained" 
+                            variant="contained"
                             onClick={onAddClick}
                             disabled={disableButton}>
                             <AddIcon></AddIcon>

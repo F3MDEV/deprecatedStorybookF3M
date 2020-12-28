@@ -63,7 +63,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token z25dfwhf9g"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -94,6 +95,7 @@
     "@types/brainhubeu__react-carousel": "^1.13.0",
     "@types/hammerjs": "^2.0.36",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.5.0",
     "react-is": "^16.13.1"
   }
 }
