@@ -1,0 +1,129 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.card-patient{
+  height: 173px;
+  padding: 2rem;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16), 0px 3px 6px rgba(0,0,0,0.23) !important;
+
+  &.card-topic {
+    padding: 2rem;
+  }
+
+  .avatar-card-patient{
+    width: 50px;
+    height:50px;
+    min-width: 49px;
+    min-height: 49px;
+  }
+
+  .content-text-card {
+    position: absolute;
+    height: 147px;
+    padding-right: 28px;
+    overflow: hidden;
+    font-size: 1.3rem;
+
+    &.content-text-card-empty{
+      height: unset;
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .empty-state-card{
+      width: 10.6rem;
+    }
+  }
+  
+  .list-wounds-card {
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+
+    span{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+  
+  .more-information-adviser {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    margin-top: 50px;
+    position: absolute;
+  }
+
+  .name-info-card{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    font-weight: 700;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  } 
+
+  
+.button-card-wound {
+  background-color: var(--color-wound-theme) !important;
+  min-width: 196px !important;
+  color: $white;
+
+  .times-up{
+    color: $white;
+  }
+}
+
+  .bottom-info-container{
+    line-height: 1;
+    .roboto-regular{
+          font-family: "Roboto";
+          font-weight: 500 !important;
+      
+    }
+  }
+
+  .patient-details{
+    p{
+      &:first-of-type{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &:nth-child(2), &:nth-child(3){
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .identification-code{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width:100px;
+      }
+    }
+  } 
+
+  .times-up{
+    color: $red;
+  }
+}
+
+
+@media (max-width: map-get($grid-breakpoints, md)){
+  .bottom-info-container{
+    .name-health-professional{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 117px;
+      line-height: 1.2;
+    }
+  }
+}

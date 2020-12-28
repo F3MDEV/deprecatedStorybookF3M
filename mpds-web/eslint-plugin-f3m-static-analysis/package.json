@@ -1,0 +1,39 @@
+{
+  "name": "eslint-plugin-f3m-static-analysis",
+  "version": "0.0.1",
+  "description": "Projeto com as diferentes configurações dos projetos com JavaScript.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "cdrodrigues",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "eslint": "^3.9.1",
+    "eslint-plugin-import": "~2.20.1",
+    "eslint-plugin-jsx-a11y": "~6.2.3",
+    "eslint-plugin-node": "~11.0.0",
+    "eslint-plugin-react": "~7.18.3",
+    "eslint-plugin-react-redux": "~3.0.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-promise": "^4.2.1",
+    "mocha": "^7.0.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.9.1",
+    "eslint-plugin-react": ">=7.18.3",
+    "eslint-plugin-react-redux": ">=3.0.3",
+    "eslint-plugin-import": ">=2.20.1",
+    "eslint-plugin-jsx-a11y": ">=6.2.3",
+    "eslint-plugin-node": ">=11.0.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}

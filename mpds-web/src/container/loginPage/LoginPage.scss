@@ -1,0 +1,167 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.fix-margin-go-back{
+  margin-left: -6px;
+}
+
+.fit-photo{
+  object-fit: cover;
+}
+
+.border-image{
+  border: 3px solid #DCDCDC;
+}
+
+.login-illustration{
+  background-image: url(/images/homepage.png);
+  height: 100%;
+  background-color: #f4fafb;
+  background-repeat: no-repeat;
+  max-width: 1200px;
+  .button-login{
+    min-width:150px;
+    font-weight: 700;
+  }
+
+  a:hover {
+    color: var(--color-primary-dark) !important;
+  }
+  
+  .flexwrap-margin-unset{
+    flex-wrap: unset;
+    margin: 0;
+
+    .ellipsis-info{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 185px;
+      line-height: 1.2;
+    }
+  }
+
+  .login-input-bbottom{
+    .MuiInputAdornment-positionEnd{
+      .MuiButtonBase-root{
+        margin-right: -12px;
+      }    
+    }
+  }
+
+  /* overrides */
+  .MuiFormLabel-root{
+    font-size: 20px;
+
+    &.login-input-label{
+      font-size: 18px !important;
+      color: var(--color-primary) !important;
+      font-weight: 700;
+    }
+  }
+
+  .MuiInput-underline{
+    &.login-input-bbottom:before{
+      border-bottom: 1px solid var(--color-primary) !important;
+    }
+    
+    &:hover:not(.Mui-disabled):before {
+      border-bottom: 2px solid var(--color-primary) !important;
+    }
+  }
+  
+  .MuiLink-underlineHover{
+    &.login-info{
+      font-weight: 400;
+      font-size:1.2rem;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  .institition-fsize{
+    font-size: 1rem !important;
+
+    &.institution-select-btn{
+      font-weight: 700;
+      
+      &:hover{
+        background-color: var(--color-primary) !important;
+        color: var(--color-white); 
+        border-radius: 0;
+      }
+
+      .MuiButton-label{
+        overflow: hidden;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        word-break: break-all;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .login-illustration {
+    background-size: 815px;
+    background-position: right 80px;
+  }
+}
+
+@media (min-width: 1200px){
+  .login-illustration {
+    height: 100%;
+    background-size: 890px;
+    background-position: right 40px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 600px){
+  .login-illustration {
+    padding: 0 10.0rem; 
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) and (max-width: 991px){
+  .login-illustration {
+    /* background-image: url(/images/homepage_tablet.png); */
+    background-color: #f4fafb;
+    height: 100%;
+    background-position: 50% 98%;
+    width: 100%;
+    background-size: 555px;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, sm)) and (max-width: map-get($grid-breakpoints, md)){
+  .login-illustration {
+    background-color: #f4fafb;
+    height: 100%;
+    /* background-image: url(/images/homepage_tablet.png); */
+    background-position: 50% 98%;
+    width: 100%;
+    background-size: 555px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: map-get($grid-breakpoints, sm)){
+  .login-illustration {
+    background-image: none;
+    background-color: rgb(244, 250, 251);
+    height: 100%;
+    /* background-image: url(/images/homepage_mobile.png); */
+    background-position: 52% 59rem;
+  }
+}
+
+@media (max-width: 400px){
+  .login-illustration {
+    background-image: none;
+    background-color: rgb(244, 250, 251);
+    background-size:600px;
+    background-position: 52% 52.5rem;
+    height: 100%;
+  }
+}

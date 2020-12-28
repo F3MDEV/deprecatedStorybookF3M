@@ -1,0 +1,89 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.container-photo-user{
+    max-width:17.9rem;
+    height: 17.9rem;
+    .photo-user{
+        width:17.9rem;
+        height: 17.9rem;
+        object-fit: cover;
+    }
+    .border-photo-user{
+        border: 0.25rem solid #DCDCDC;
+    }
+    .add-photo-user{
+        background:map-get($theme-colors, primary);
+        left: 35%;
+        bottom: 4rem;
+        
+        &:hover{
+            background: map-get($theme-colors, primary);
+            
+        }
+        .white-color{
+            color: $white;
+        }
+
+        .MuiSvgIcon-root {
+            width: 2rem;
+            height: 2rem;
+            padding: 0.1rem;
+            cursor: pointer !important;
+        }
+        .MuiIconButton-label{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+.personal-info-title{
+    font-size:2rem;
+}
+
+/* Fix color in autocomplete (no result op) */
+
+.MuiAutocomplete-popper{
+    div{
+        color: $main-text !important; //the element of the dom is generated, so it has to has !important
+    }
+}
+
+.container-id-photo-user{
+    width: 12.0rem;
+}
+
+.label-font-size{
+    font-size: 1.6rem !important;
+}
+
+//override disabled elements
+.user-info-modal{
+    .MuiFormLabel-root{
+        color: $main-text !important;
+        &.Mui-disabled{
+            color: $main-text !important;
+        }
+    }
+
+    .MuiChip-root{
+        background: none;
+        &.Mui-disabled{
+            border: .1rem solid map-get($theme-colors, primary);
+            padding: .4rem;
+            color: map-get($theme-colors, primary);
+            opacity: 1;
+            font-weight: 700;
+        }
+    }
+    
+    .MuiChip-deleteIcon{
+        display: none;
+    }
+}
+@media only screen and (max-width: map-get($grid-breakpoints, md)) {
+    .personal-info-title{
+        font-size:1.6rem;
+        padding-top: 0.5rem;
+    }
+}

@@ -1,0 +1,61 @@
+.border-img-grd{
+  border: 2px solid #DCDCDC;
+}
+
+@import "../../../assets/bootstrap/scss/variables";
+/* overrides */
+.MuiTableRow-root{
+  .name-width{
+    max-width: 375px;
+    font-weight: 700;
+  }
+
+  .last-intervention-user-width{
+    white-space: nowrap;
+  }
+
+  &.MuiTableRow-hover:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    cursor: pointer;
+
+    .MuiTableCell-body {
+      color: var(--color-white) !important;
+    }
+  }
+  .button-table-wound {
+    background-color: var(--color-wound-theme) !important;
+    min-width: 196px !important;
+   
+
+    .MuiButton-label{
+      justify-content: unset;
+      font-size: 12px;
+    }
+  }
+  .MuiTableSortLabel-root{
+    color: #494949 !important;
+    &.MuiTableSortLabel-active{
+      &.MuiTableSortLabel-root{
+        &.MuiTableSortLabel-active{
+          .MuiTableSortLabel-icon {
+            color: #494949 !important;
+            //font-size: 1.2rem !important;
+          }
+        } 
+      }
+    }  
+  }
+}
+
+.MuiTablePagination-root {
+  overflow: auto;
+}
+
+@media (max-width: map-get($grid-breakpoints, sm)){
+  .MuiTableRow-root{
+    .name-width{
+      max-width: 25rem;
+    }
+  }
+}

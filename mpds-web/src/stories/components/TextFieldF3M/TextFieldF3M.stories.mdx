@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import TextFieldF3M from './TextFieldF3M';
+
+<Meta title="Components/TextFieldF3M"
+component={TextFieldF3M}
+ />
+
+# TextFieldF3M
+
+The most humble textfield in the company! 😉 <br />
+It is based on the MaterialUI Textfield native element. Check the props! 👋 <br />
+
+## Component API
+<Props />
+
+export const Template = (args) => <TextFieldF3M {...args} />
+
+<Canvas>
+  <Story
+    name="TextFieldF3M"
+    args={{
+        classes:"fix-date-margin-top-md mt-sm-4",
+        id:"TextFieldF3M1",
+        inputLabelProps:{ shrink: true },
+        labelText:"Name of the patient",
+        placeholder:"Type here",
+        /* onChangeInput:, */
+        defaultValueInput:"Ricardo"
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>

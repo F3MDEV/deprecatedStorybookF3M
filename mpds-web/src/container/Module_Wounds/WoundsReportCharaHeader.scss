@@ -1,0 +1,184 @@
+@import "../../assets/bootstrap/scss/variables";
+
+
+.transparent-gradient-container{
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 84%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  height: 100px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  width: unset !important;
+
+  &.transparent-bg-container-selected{
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    margin-top: .9rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.wounds-card-characterization {
+  background-color: var(--color-wound-theme) !important;
+  height: 238px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23) !important;
+
+  &.wounds-card-closed {
+    background: var(--color-text) !important;
+    transition: 1 ease-in;
+  }
+
+  .slick-slider {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+
+    .slick-prev{
+      color:white;
+      opacity: .7;
+      &:focus{
+        color:white;
+        opacity: .7;
+      }
+      &::before{
+        content: none;
+      }
+      &:hover{
+        color: white;
+        opacity: 1;
+      }
+      .MuiSvgIcon-root{
+        width: 2rem;
+      }
+    }
+
+    .slick-next{
+      color:white;
+      opacity: .7;
+      transform: rotate(180deg) translate(0, 50%);
+      &:focus{
+        color:white;
+        opacity: .7;
+      }
+      &::before{
+        content: none;
+      }
+      &:hover{
+        color: white;
+        opacity: 1;
+      }
+      .MuiSvgIcon-root{
+        width: 2rem;
+      }
+    }
+
+    .slick-slide{
+      .state-no-photo{
+        width: 16rem;
+        height: 16rem;
+        border-radius: .4rem;
+        
+        //border: 0.08rem solid $white;
+        background: $no-records;
+        .icon-image{
+            img{
+                width: 5rem;
+                height: 10rem;
+                bottom: 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+            }
+        }
+        
+      .border-img {
+        border-radius: 5px;
+      }
+
+      .border-selected-img {
+        border: 6px solid var(--color-primary) !important;
+        border-radius: 10px;
+      }
+
+      .border-selected-img-closedWound {
+        border: 6px solid var(--color-primary) !important;
+        border-radius: 10px;
+      }
+
+      }
+
+      img {
+        margin: auto;
+        height: 160px;
+      }
+
+      .border-img {
+        border-radius: 5px;
+      }
+
+      .border-selected-img {
+        border: 6px solid var(--color-primary) !important;
+        border-radius: 10px;
+      }
+
+      .border-selected-img-closedWound {
+        border: 6px solid var(--color-primary) !important;
+        border-radius: 10px;
+      }
+
+      .container-photo-charac {
+        text-align: right;
+        top: 10px;
+        padding-right: 20px;
+        margin-bottom: 2px;
+
+        &.container-photo-charac-no-data{
+          top: .5rem;
+          right: .5rem;
+        }
+
+        .icon-color-wounds-card {
+          padding-top: 2px !important;
+        }
+
+        &.transparent-gradient-container{
+          left: 0;
+          right: 0;
+          top: 0;
+          height: 55px;
+          background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 84%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+          
+          &.w-100{
+              width: unset !important;
+          }
+      
+          &.container-photo-charac{
+              padding-right: unset;
+          }
+      }
+      }   
+
+      .fab-photo-gallery {
+        position: absolute !important;
+        bottom: 10px;
+        right: 12px;
+
+        .MuiSvgIcon-root {
+          width: 0.8em;
+        }
+
+        .MuiFab-sizeSmall {
+          width: 37px;
+          height: 5px;
+        }
+      }
+    }
+  }
+}
+

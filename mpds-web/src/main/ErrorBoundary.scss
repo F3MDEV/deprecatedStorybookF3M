@@ -1,0 +1,118 @@
+@import "../assets/bootstrap/scss/variables";
+
+.error-background{
+    background: $error-background;
+    height: 100vh;
+
+.error-container{
+    background: $error-background;
+  
+.ilustration-error{
+    height: 37rem;
+    width: auto;
+}
+
+.button-login{
+    min-width: 150px;
+    font-weight: 700;
+}
+
+.title-error{
+    color: #494949;
+    text-decoration: none solid rgb(73, 73, 73);
+    line-height: 38px;
+    font-size: 3rem;
+}
+
+.description-error{
+    color: #494949;
+    text-decoration: none solid rgb(73, 73, 73);
+    line-height: 30px;
+    font-size: 1.8rem;
+}
+
+.code-error{
+    font-size: 1.4rem;
+}
+
+.f3m-logo{
+    margin-top: 20rem;
+}
+
+}
+}
+
+@media (max-width: 768px) and (max-width: 992px) {
+    .error-background{
+        .error-container{
+        .ilustration-error{
+            height: 32rem;
+            width: auto;
+        }
+
+        .title-error, .description-error, .code-error, .illustration-column{
+            text-align: center;
+        }
+
+        .title-error{
+            font-size: 2.6rem;
+            margin: 0 10rem !important;
+        }
+
+        .description-error{
+            font-size: 1.6rem;
+            margin: 1rem 10rem !important;
+        }
+
+        .code-error{
+            font-size: 1.2rem;
+        }
+
+        .f3m-logo{
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+        }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .error-background{
+        .error-container{   
+            .main-header{
+                padding: 0;
+                .navbar{
+                    padding: 0;
+                }
+            }
+
+        .ilustration-error{
+            height: 23.4rem;
+            width: auto;
+        }
+
+        .title-error, .description-error, .code-error, .illustration-column, .notify-input{
+            text-align: center;
+        }
+
+        .title-error{
+            font-size: 1.8rem;
+            line-height: 30px;
+        }
+
+        .description-error{
+            font-size: 1.6rem;
+        }
+
+        .code-error{
+            font-size: 1.2rem;
+            
+        }
+
+        .f3m-logo{
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+        }
+    }
+}

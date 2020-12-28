@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import BackToTop from './BackToTop';
+
+<Meta title="Components/BackToTop" component={BackToTop}/>
+
+# Slider Arrow
+
+Documentação em falta.
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <BackToTop {...args} />
+
+<Canvas>
+  <Story name="Normal"
+    argTypes={{
+        handleClick: { action: 'To the top and far beyond!' }
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>

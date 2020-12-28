@@ -1,0 +1,180 @@
+@import "../../assets/bootstrap/scss/variables";
+
+
+.tooltip-header{
+  z-index: 10004;
+}
+
+.negative-margins{
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.border-expand-menu{
+  border-bottom: 0.1rem solid $main-text-transparent;
+  
+  .institution-item{
+    font-size:1.6rem;
+    font-family: 'Nunito', sans-serif;
+    color: $main-text;
+  }
+
+  .id-dropdown-parent{
+      &:hover {
+          color: $main-text;
+        .id-dropdown{
+          color: $main-text;
+        }
+        .inst-dropdown {
+          color: $main-text;
+        }
+      }
+    }
+  }
+  .user-options{
+    &:hover {
+      color: map-get($theme-colors, primary);
+    }
+
+    .fit-photo{
+      object-fit: cover;
+    }
+
+  .MuiSvgIcon-root{
+    font-size: 3.5rem !important;
+  }
+ 
+  .institution-item{
+    font-size:1.6rem;
+    font-family: 'Nunito', sans-serif;
+    color: $main-text;
+  }
+}
+
+
+
+.id-dropdown-parent{
+  &:hover {
+    .id-dropdown{
+      color: var(--color-primary);
+    }
+    .inst-dropdown {
+      color: var(--color-primary);
+    }
+  }
+  .id-dropdown{
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+}
+
+.dropdown-item{
+  color: var(--color-text);
+  font-family: 'Nunito', sans-serif;
+  padding: .2rem 1.5rem;
+  &:focus{
+    color: var(--color-white) !important;
+    background: var(--color-primary);
+  }
+  &.dropdown-item:active{
+    color: var(--color-white) !important;
+    background: var(--color-primary);
+  }
+  &.active{
+    color: var(--color-white) !important;
+    background: var(--color-primary);
+  } 
+}
+
+.dropdown-menu-user{
+  border-radius: .5rem;
+  border: 0;
+  box-shadow: 0rem .3rem .6rem rgba(0,0,0,0.2);
+  
+  &.dropdown-menu{
+    font-size: 1.4rem;
+    padding-top:1.2rem;
+    padding-bottom: 1.4rem;
+    z-index: 10004;
+  }
+
+  .dropdown-item{
+    padding-bottom: .4rem;
+    padding-top: .4rem;
+    padding-left:2rem;
+    padding-right:2rem;
+    &:hover{
+      color: map-get($theme-colors, primary);
+    }
+  }
+
+  .dropdown-item:first-child{
+    padding-bottom: 0rem;
+  }
+  
+} 
+
+.dropdown-menu-institution{
+  padding: 0;
+  border-radius: .5rem;
+  border: 0;
+  box-shadow: 0rem .3rem .6rem rgba(0,0,0,0.2);
+
+  .institution-divider{
+    &:last-child{
+      display: none;
+    }
+  } 
+
+  &.dropdown-menu{
+    font-size: 1.4rem;
+    z-index: 10004;
+  }
+  
+  .institution-item{
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
+
+    &:first-child{
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
+  } 
+  .institution-divider{
+    margin: 0;
+  }
+
+}
+
+.border-image-header{
+  border: 2px solid #DCDCDC;
+}
+
+/*overrides*/
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 30px !important;
+}
+
+.grey-icon-override{
+  color:  $main-text;
+}
+
+.navbar-collapse{
+  &.collapse{
+      &.show{
+          height: calc(100vh - 6.5rem);
+      }
+  } 
+} 
+
+.navbar-nav{
+  .MuiExpansionPanel-root:before{
+    height:0;
+  }
+  .inst-dropdown-parent{
+    a:hover{
+      color: map-get($theme-colors, primary);
+    }
+  }
+}

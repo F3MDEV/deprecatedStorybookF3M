@@ -1,0 +1,794 @@
+@import "../../../assets/bootstrap/scss/variables";
+
+.download-position{
+  right: 35px;
+}  
+
+.ellipse-button-card{
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-header-info{
+  flex-wrap: wrap;
+}
+
+.fix-last-item-card-row{
+  .card-row{
+    &:last-child{
+      padding-right: 1rem !important;
+    }
+  }
+}
+
+.box-shadow-button-group{
+  box-shadow: 0rem 0.2rem 0.6rem rgba(0,0,0,0.2);
+}
+
+/* CARDS SECTION */
+
+.button-filter-wounds{
+  width:165px;
+  padding: 2px 2px !important;
+}
+
+.modal-size-fix{
+  min-height: 55rem;
+  min-width: 80rem;
+}
+
+.card-user {
+  height: 238px;
+  padding: 2rem !important;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16), 0px 3px 6px rgba(0,0,0,0.23) !important;
+
+  &.card-topic {
+    padding: 2rem;
+  }
+ 
+  .avatar-card{
+    width: 50px;
+    height:50px;
+    min-width: 49px;
+    min-height: 49px;
+  }
+
+  .content-text-card {
+    position: absolute;
+    height: 147px;
+    padding-right: 28px;
+    overflow: hidden;
+    font-size: 1.3rem;
+
+    &.content-text-card-empty{
+      height: unset;
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .empty-state-card{
+      width: 10.6rem;
+    }
+  }
+  
+  .list-wounds-card {
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+
+    span{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+  
+  .more-information-adviser {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    margin-top: 50px;
+    position: absolute;
+  }
+
+  .name-info-card{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    font-weight: 700;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  } 
+
+  .patient-details{
+    p{
+      &:first-of-type{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &:nth-child(2), &:nth-child(3){
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .identification-code{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width:100px;
+      }
+    }
+  } 
+}
+
+.modal-content{
+  max-height: 418px;
+  overflow-y: auto;
+  background-color: unset;
+  border: none;
+}
+
+.appbar-wound{
+  background: var(--color-wound-theme) !important;
+}
+
+
+
+
+/*tables in cards*/
+.MuiDialogContent-root{
+  .card-table{
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+    height: 140px;
+  
+    td, th {
+      border-bottom: 1px solid #ddd;
+      padding: 0 8px 0 0;
+      max-width: 0px;
+      white-space: unset;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .empty-state-card{
+      margin-top: 6rem;
+      width: 10.6rem;
+    }
+  }
+}
+
+
+
+.card-table{
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+  height: 140px;
+  
+
+  .empty-state-card{
+    width: 10.6rem;
+  }
+
+  td, th {
+    border-bottom: 1px solid #ddd;
+    max-width: 0px;
+    .space-control{
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      padding: 0 8px 0 0;
+      word-break: break-word;
+    }
+  }
+
+  tr{
+    .font-size-table-all{
+      font-size: 14px;
+    }
+    &:nth-child(1){
+      padding: 0 8px 0 0;
+      font-weight: 700;
+      text-align: left;
+      color: var(--color-text);
+    }
+  }
+}
+
+.horizontal-scrollable{
+
+  .fix-cards-vertically{
+    display:block;
+  }
+
+  .fix-spacing-no-gutters{
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &.viewport-margins-modal-wound{
+    padding: 0px 15px 20px 30px;
+
+    > .row {
+      overflow-x: auto;
+      white-space: nowrap;
+
+      
+      > .col {
+        display: inline-block;
+        float: none;
+        white-space: normal;
+      }
+    }
+  
+    > .row {
+
+      &.no-gutters{
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      > .col-10 {
+        display: inline-block;
+        float: none;
+        white-space: normal;
+      }
+    }
+
+    .carousel-modal{
+      .transparent-bg-container{
+        border-top-left-radius: .6rem;
+        border-top-right-radius: .6rem;
+      }
+      img{
+        border-radius: .6rem;
+      }
+    }
+  }
+
+  > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+    > .col {
+      display: inline-block;
+      float: none;
+      white-space: normal;
+    }
+  }
+
+  > .row {
+    > .col-10 {
+      display: inline-block;
+      float: none;
+      white-space: normal;
+    }
+  }
+}
+
+.carousel-modal{
+  .carousel{
+    .control-prev{
+      &.control-arrow{
+        left: 16px;
+        background: rgba(255, 255, 255, 0.6);
+        content: url(/images/key_left.svg);
+
+        &:hover{
+          background: rgba(255, 255, 255, 0.8)
+        }
+
+        &:before{
+        content: url(/images/key_left.svg);
+        border: unset;
+        }
+      }
+    }
+
+    .control-arrow{
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      margin-top:auto;
+      margin-bottom: auto;
+      font-size: 20px;
+    }
+    
+    .slide {
+      text-align: left;
+      background:none;
+
+      .border-selected{
+        border: 10px solid var(--color-primary) !important;
+        border-radius: 5px;
+      }
+  
+      .transparent-bg-container{
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 84%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        height: 100px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+        width: unset !important;
+      
+        &.transparent-bg-container-selected{
+          border-top-left-radius: 0rem;
+          border-top-right-radius: 0rem;
+          margin-top: .9rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  } 
+  .carousel-slider{
+    img{
+      max-height: 600px;
+      max-width:600px;
+    }
+    .control-next{
+      &.control-arrow{
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-top:auto;
+        margin-bottom: auto;
+        font-size: 20px;
+
+        &:before{
+          content: url(/images/key_right.svg);
+          border: unset;
+        }
+        &:hover{
+          background: rgba(255, 255, 255, 0.8)
+        }
+      }
+    }
+  } 
+} 
+
+.carousel-fullscreen{
+  background: #000000;
+  .carousel{
+
+    .control-prev{
+      &.control-arrow{
+        left: 16px;
+        background: rgba(255, 255, 255, 0.6);
+        content: url(/images/key_left.svg);
+
+        &:hover{
+          background: rgba(255, 255, 255, 0.8)
+        }
+        &:before{
+          content: url(/images/key_left.svg);
+          border: unset;
+          }
+      }
+    }
+    .control-arrow{
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      margin-top:auto;
+      margin-bottom: auto;
+      font-size: 20px;
+    }
+    .control-next{
+      &.control-arrow{
+        right: 16px;
+        background: rgba(255, 255, 255, 0.6);
+        content: url(/images/key_right.svg);
+        &:hover{
+          background: rgba(255, 255, 255, 0.8)
+        }
+      }
+    }
+   
+      .transparent-bg-container{
+        height:100px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+84 */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 84%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+      }
+    
+      .border-selected{
+        border: 10px solid var(--color-primary) !important;
+        border-radius: 5px;
+      }
+
+  } 
+
+  .carousel-slider{
+    img{
+      width: 100vh;
+    }
+ 
+    &.carousel{
+      height: 100vh;
+      margin-left: auto;
+      margin-right: auto;
+
+      .control-next{
+        &.control-arrow{
+          right: 16px;
+          background: rgba(255, 255, 255, 0.6);
+          content: url(/images/key_right.svg);
+
+          &:before{
+            content: url(/images/key_right.svg);
+            border: unset;
+          }
+        }
+      }
+
+      .control-arrow{
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-top:auto;
+        margin-bottom: auto;
+        font-size: 20px;
+      }
+
+      .transparent-bg-container{
+        height:100px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+84 */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 84%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 84%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+      }
+    
+      
+    }
+  } 
+  .carousel-status{
+    right:unset;
+    margin: 15px;
+  }
+} 
+
+.avatar-modal{
+  width: 5rem;
+}
+
+/* OVERRIDES */
+
+.MuiButtonGroup-root{
+  .text-uppercase{
+   
+    /* .MuiButton-label{
+      font-weight: 100;
+    } */
+    
+    &.roboto-bold{
+      font-weight: 700;
+    }
+    
+  }
+  .MuiButton-root{
+    &.selected{
+      background: var(--color-primary); 
+      color: var(--color-white); 
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: map-get($grid-breakpoints, md)){
+  .center-info-localization{
+    margin: 121px auto;
+  }
+}
+
+
+@media (max-width: 767px){
+  .list-header-info{
+    flex-wrap: unset;
+    flex-direction: column;
+  }
+
+  .MuiDialogTitle-root {
+    &.reducing-padding-detail{
+      padding: 1rem 1.2rem;
+
+      .name-line-height{
+        line-height: 2.5rem;
+      }
+    }
+}
+
+  .avatar-modal{
+    width: 6rem;
+    margin: auto 0;
+  }
+
+}
+
+/* Safari 6.1-10.0 (not 10.1) */
+
+/* @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
+{ @media {
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+  }
+
+  .horizontal-scrollable > .row > .col {
+      display: list-item;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: list-item;
+  }
+}} */
+
+/* Safari 11+ */
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+}}
+
+/* Safari 10.0 (not 10.1) */
+
+_::-webkit-:host:not(:root:root), .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  _::-webkit-:host:not(:root:root), .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  _::-webkit-:host:not(:root:root), .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+
+/* Safari 10.1 */
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+
+}}
+
+/* Safari 10.0 (not 10.1) but not on iOS */
+
+_::-webkit-:-webkit-full-screen:host:not(:root:root), .horizontal-scrollable .fix-cards-vertically{
+  display:  -webkit-box;
+  flex-flow: row;
+}
+
+_::-webkit-:-webkit-full-screen:host:not(:root:root), .horizontal-scrollable > .row > .col {
+  display: block;
+}
+
+
+_::-webkit-:-webkit-full-screen:host:not(:root:root), .horizontal-scrollable > .row > .col-10 {
+  display: block;
+}
+
+@supports (-webkit-hyphens:none)
+{
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+}
+
+
+_:not(a,b), .horizontal-scrollable .fix-cards-vertically{
+  display:  -webkit-box;
+  flex-flow: row;
+}
+
+_:not(a,b), .horizontal-scrollable > .row > .col {
+  display: block;
+}
+
+_:not(a,b), .horizontal-scrollable > .row > .col-10 {
+  display: block;
+}
+
+/* Safari 9+ */
+
+_:default:not(:root:root), .horizontal-scrollable .fix-cards-vertically{
+  display:  -webkit-box;
+  flex-flow: row;
+}
+
+_:default:not(:root:root), .horizontal-scrollable > .row > .col {
+  display: block;
+}
+
+_:default:not(:root:root), .horizontal-scrollable > .row > .col-10 {
+  display: block;
+}
+
+/* Safari 9+ */
+
+@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
+
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+}
+
+/* Safari 9.0-10.0 (not 10.1) */
+
+_::-webkit-:not(:root:root), .horizontal-scrollable .fix-cards-vertically{
+  display:  -webkit-box;
+  flex-flow: row;
+}
+
+_::-webkit-:not(:root:root), .horizontal-scrollable > .row > .col {
+  display: block;
+}
+
+_::-webkit-:not(:root:root), .horizontal-scrollable > .row > .col-10 {
+  display: block;
+}
+
+/* Safari 9 */
+
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) 
+{
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+
+}
+
+/* Safari 9.0 (iOS Only) */
+
+@supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto))
+and (not (-moz-appearance:none))
+{
+
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+
+}
+
+/* Safari 9+ (non-iOS) */
+
+_:default:not(:root:root), .horizontal-scrollable .fix-cards-vertically{
+  display:  -webkit-box;
+  flex-flow: row;
+}
+
+_:default:not(:root:root), .horizontal-scrollable > .row > .col {
+  display: block;
+}
+
+_:default:not(:root:root), .horizontal-scrollable > .row > .col-10 {
+  display: block;
+}
+
+/* Safari 9.0-10.0 (not 10.1) (non-iOS) */
+
+_:-webkit-full-screen:not(:root:root), .horizontal-scrollable .fix-cards-vertically{
+  display:  -webkit-box;
+  flex-flow: row;
+}
+
+_:-webkit-full-screen:not(:root:root), .horizontal-scrollable > .row > .col {
+  display: block;
+}
+
+_:-webkit-full-screen:not(:root:root), .horizontal-scrollable > .row > .col-10 {
+  display: block;
+}
+
+
+/* Safari 6.1-7.0 */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)
+{  
+  .horizontal-scrollable .fix-cards-vertically{
+    display:  -webkit-box;
+    flex-flow: row;
+  }
+
+  .horizontal-scrollable > .row > .col {
+    display: block;
+  }
+
+  .horizontal-scrollable > .row > .col-10 {
+    display: block;
+  }
+
+}
+
+/* Safari 6.1-10.0 (not 10.1) (non-iOS) */
+
+/* @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
+{ @media {
+    _:-webkit-full-screen, .horizontal-scrollable .fix-cards-vertically{
+      display:  -webkit-box;
+    }
+
+    _:-webkit-full-screen, .horizontal-scrollable > .row > .col {
+      display: list-item;
+    }
+  
+    _:-webkit-full-screen, .horizontal-scrollable > .row > .col-10 {
+      display: list-item;
+    }
+}} */

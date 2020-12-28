@@ -1,0 +1,45 @@
+.container-cards {
+  background: white;
+  /* padding: 10px 15px; */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23) !important;
+  border-radius: 4px;
+}
+.container-card {
+  padding: 10px 15px;
+
+  .area-point {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    max-width: calc(
+      140.97pt + 61.97572pt
+    ); /* proporcional dos 89pt para a largura*/
+    height: calc(202.5pt + 89pt);
+    /* max-width: calc(140.97pt);
+    height: calc(202.5pt); */
+
+    img {
+      margin: auto;
+      /* padding: 4.5pt 0; */
+      padding: 6.48pt 0; /* proporcional dos 4.5pt */
+      max-width: 100%;
+      height: 100%;
+    }
+    .point {
+      position: absolute;
+      width: 12px; /* IMPORTANTE: Se se alterar o tamanho do ponto tem que se alterar os cálculos do Top e Left*/
+      height: 12px;
+      background: #ff8882;
+      border-radius: 50%;
+    }
+    .pointClosed {
+      position: absolute;
+      width: 12px; /* IMPORTANTE: Se se alterar o tamanho do ponto tem que se alterar os cálculos do Top e Left*/
+      height: 12px;
+      background: #494949;
+      border-radius: 50%;
+    }
+  }
+}
+
+

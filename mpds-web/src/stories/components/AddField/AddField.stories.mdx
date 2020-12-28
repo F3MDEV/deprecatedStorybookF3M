@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import AddField from './AddField';
+
+<Meta title="Components/AddField" component={AddField}/>
+
+# Slider Arrow
+
+Documentação em falta.
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <AddField {...args} />
+
+<Canvas>
+  <Story name="Normal" 
+    argTypes={{
+        onAddClick: { action: 'Item added!' }
+    }}
+    args={{ 
+        colorOfTheButton: "primary"
+        
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>

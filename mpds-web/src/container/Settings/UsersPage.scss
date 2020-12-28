@@ -1,0 +1,130 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.search-users-page{
+  .MuiInputBase-root{
+    font-size: 1.6rem;
+    font-style: italic;
+  }
+
+  .MuiInput-underline{
+      &:before,
+      &::after,
+      &:hover:not(.Mui-disabled):before{
+        border: none !important;
+      }
+  }
+}
+
+.expanded-panels-container{
+  margin-top: 0rem;
+}
+
+.expanded-institution{
+  .MuiExpansionPanelDetails-root{
+    padding: 0;
+  }
+
+  .MuiTableCell-sizeSmall{
+    padding: 6px 24px 6px 0px;
+  }
+
+  .MuiPaper-elevation1{
+    margin-bottom: 0 !important;
+  }
+
+  .institution-title{
+    white-space: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .institution-title{
+    font-size: 2.2rem;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) and  (max-width: map-get($grid-breakpoints, lg)){
+    .institution-title{
+      font-size: 2rem;
+    }
+  }
+
+  @media(max-width: map-get($grid-breakpoints, md)){
+    .institution-title{
+      font-size: 1.8rem;
+    }
+  }
+
+  @media(max-width: 350px){
+    .institution-title{
+      width: 21rem;
+    }
+  }
+
+  @media(max-width: 350px){
+    .institution-title{
+      width: 21rem;
+    }
+  }
+
+  @media(min-width: 350px) and (max-width: 380px){
+    .institution-title{
+      width: 25rem;
+    }
+  }
+
+  @media (min-width: 380px) and (max-width: 414px){
+    .institution-title{
+      width: 28rem;
+    }
+  }
+
+  @media(min-width: 415px) and (max-width: 470px){
+    .institution-title{
+      width: 32rem;
+    }
+  }
+
+  @media(min-width: 471px) and (max-width: 520px){
+    .institution-title{
+      width: 36rem;
+    }
+  }
+
+  @media(min-width: 521px) and (max-width: 570px){
+    .institution-title{
+      width: 41rem;
+    }
+  }
+
+  @media(min-width: 571px) and (max-width: 668px){
+    .institution-title{
+      width: 46rem;
+    }
+  }
+
+  @media(min-width: 667px) and (max-width: 767px){
+    .institution-title{
+      width: 56rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .search-users-page{
+    .MuiInput-underline{
+        &:before,
+        &::after,
+        &:hover:not(.Mui-disabled):before{
+          border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+        }
+    }
+  }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, md)) {
+  .search-users-page{
+    .MuiInputBase-input{
+      font-size: 1.2rem;
+    }
+  } 
+}

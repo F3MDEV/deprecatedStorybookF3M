@@ -1,0 +1,81 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.companys-panel-padding-fix{
+    padding: 0 24px 16px 16px !important;
+
+    .input-time-update{
+        width: 10rem;
+    }
+}
+
+.title-space-disk{
+    font-size: 1.4rem;
+}
+
+.space-available-text{
+    font-size:1.2rem;
+}
+
+.disk-space-progress{
+    height: .6rem;
+    width: 12.0rem; 
+    border-radius: 1rem;
+}
+
+.admin-modals{
+    .MuiDialogTitle-root{
+        .MuiTypography-root{
+            font-size: 1.8rem;
+        }
+    }
+
+    .MuiDialogContentText-root{
+        font-size: 1.4rem;
+        color: $main-text; //#919191
+    }
+
+
+
+    .MuiButtonBase-root{
+        &:hover{
+            background-color: transparent;
+        }
+        &.MuiButton-textPrimary{
+            &:hover{
+                background-color: transparent;
+            }
+        }
+
+        .MuiButton-label{
+            &:hover{
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+@media (max-width: map-get($grid-breakpoints, md)){
+    .title-space-disk{
+        font-size: 1rem;
+    }    
+
+    .space-available-text{
+        font-size:1rem;
+    }
+    
+    .disk-space-progress{
+        width: 5rem; 
+    }
+}
+
+@media (max-width: 345px){
+    .disk-space-progress{
+        width: 2rem; 
+    }
+
+    .title-space-disk {
+        font-size: .9rem;
+    }
+    
+}
