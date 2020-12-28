@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,800|Roboto+Condensed:400,700|Roboto:400,400i,500,700,900&display=swap');
+
+html{
+  font-size: 62.5%;
+}
+
+.vh-100{
+  height: 100vh;
+}
+#root{
+  height: 100vh;
+}
+:root {
+  --color-primary: #4CB3BA !important;
+  --color-primary-dark: #019ea9 !important;
+  --color-white: #FFFFFF !important;
+  --color-text-links: #019ea9 !important;
+  --color-text: #494949 !important;
+  --color-text-disabled: #b2b2b2 !important;
+  --color-wound-theme: #ff8882 !important;
+  --color-alert: #ff0000 !important;
+  --color-background-login: #F4FAFB !important;
+  --color-background: #f2f2f2 !important;
+  --color-black-fifteen-op: #00000026 !important;
+  --color-soft-grey: #D8D8D8 !important;
+  --color-medium-grey: #e6e6e6 !important;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", 'Nunito',
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f2f2f2 !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.bottom-0{
+  bottom: 0;
+}
+
+.bottom-5px{
+  bottom: .5rem;
+}
+
+.right-0{
+  right: 0;
+}
+
+/* FLEXS */
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-2{
+  flex: 2;
+}
+
+.flex-3{
+  flex: 3;
+}
+
+.flex-4{
+  flex: 4;
+}
+
+.main-shadow{
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.20);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.20);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.20);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) { 
+  .viewport-margins, .viewport-margins-b-0 {
+    padding: 0px 15px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .viewport-margins {
+    padding: 0px 50px 20px 50px;
+  }
+  .viewport-margins-b-0 {
+    padding: 0px 50px;
+  }
+}
+
+.no-padding{
+  padding: 0 !important;
+}
+
+.no-padding-y{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.opacity-50{
+  opacity: .5;
+}
+
+.opacity-40{
+  opacity: .4;
+}
+
+.opacity-100{
+  opacity: 1 !important;
+}
+
+.card-shadow{
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.16), 0px 3px 6px rgba(0,0,0,0.23) !important;
+}
+
+.footer{
+  background: #f2f2f2;
+}
+
+.footer-box-shadow{
+  box-shadow: 0rem .3rem .6rem rgba(0,0,0,1);
+}
+
+.container-password{
+  max-width: 285px;
+  margin: 0px auto;
+}
+
+.min-h-100{
+  min-height: 100%;
+}
+
+.border-radius-0{
+  border-radius: 0 !important;
+}
+
+.border-right-soft{
+  border-right: 1px solid var(--color-soft-grey);
+} 
+
+.border-left-soft{
+  border-left: 1px solid var(--color-soft-grey);
+} 
+
+.list-style-none{
+  list-style: none;
+}
+
+.left-0{
+  left:0;
+}
+
+.right-0{
+  right: 0;
+}
+
+.one-line-only{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.set-color-primary{
+  color: var(--color-primary) !important;
+}
+
+.set-color-text{
+  color: var(--color-text) !important;
+}
+
+.set-color-disabled{
+  color: var(--color-text-disabled) !important;
+}
+
+.set-background-color-disabled{
+  background: var(--color-medium-grey) !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.outline{
+  outline: none !important;
+}
+
+.white-space-nowrap{
+  white-space: nowrap;
+}
+
+.white-space-break-spaces{
+  white-space: break-spaces;
+}
+
+.text-case-unset{
+  text-transform: none;
+}
+
+.border-none{
+  border: 0;
+}
+
+
+
+/* JCC SUGGESTION TO FIX HIS PROBLEM IN CHROME (FOR NOW IT IS JUST A TEST) */
+button{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}

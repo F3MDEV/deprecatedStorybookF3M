@@ -1,0 +1,75 @@
+@import "../../../../assets/bootstrap/scss/variables";
+
+.sticky-container{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4.5rem;
+    z-index: 10001; //this huge number is needed because of the zIndex of Material UIs tooltip
+}
+
+.sticky-container-top-fixed{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+    z-index: 10001; //this huge number is needed because of the zIndex of Material UIs tooltip
+  }
+
+.sticky-Search{
+    /* position: -webkit-sticky;
+    position: sticky; */
+    top: 0rem;
+    z-index: 3;
+    &.visible-header-Search{
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -webkit-transition: opacity 1s;
+        -o-transition: opacity 1s;
+    }
+    
+    &.hidden-header-Search{
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+        transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -webkit-transition: opacity 1s;
+        -o-transition: opacity 1s;
+    }
+
+    .MuiExpansionPanel-rounded{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .background-search-bar{
+        background-color: $white-smoke;
+        .height-search-bar{    
+            height: 6rem;
+            .title-search-container{
+                width:31rem;
+                .title-search{
+                    font-size:2.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .sticky-Search{
+        .background-search-bar{
+            .height-search-bar{
+                .title-search-container{
+                    width:28rem;
+                    .title-search{
+                        font-size:2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

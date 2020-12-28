@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import SliderArrow from './SliderArrow';
+
+<Meta title="Components/SliderArrow" component={SliderArrow}/>
+
+# Slider Arrow
+
+An arrow that belongs to a carousel. :smiley:
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <SliderArrow {...args} />
+
+<Canvas>
+  <Story name="Default Arrow" 
+    argTypes={{
+        colorOfTheIcon: { control: 'color' },
+        onClick: { action: 'Previous slider item' }
+    }}
+    args={{ 
+        classes : 'span',
+        to : "prev",
+        colorOfTheIcon: "#03a9f4"
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>

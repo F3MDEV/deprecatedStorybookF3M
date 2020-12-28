@@ -1,0 +1,471 @@
+@import "../../assets/bootstrap/scss/variables";
+@import "../../assets/bootstrap/scss/typography";
+
+.border-nav {
+  border-bottom: .1rem solid $navbar-border-bottom;
+}
+
+.rotate-opened{
+  transform: rotate(180deg);
+  &.MuiSvgIcon-root{
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+}
+
+.rotate-closed{
+  transform: rotate(0deg);
+  &.MuiSvgIcon-root{
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+}
+
+.sticky,
+.sticky-navBar-Admin {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-size: cover;
+  background-color: var(--color-background) !important;
+
+  &.shadow-nav {
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
+
+    &.border-nav{
+      border: none;
+    }
+  }
+
+  &.fixed-nav-admin {
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);  
+  }
+
+  &.nav-container {
+    height: 4.5rem;
+    z-index: 10003; //this huge number is needed because of the zIndex of Material UIs tooltip
+  }
+
+  .mt-4{
+    &.container{
+      .edit-controls{
+        width: 19.2rem;
+      }
+    }
+  }
+
+  .add-icon{
+    padding: 0rem .6rem 0 .6rem;
+  }
+
+  .navbar-return {
+    padding: 0px 0px 0px 0px !important;
+    margin-right: 15px !important;
+  }
+
+  .navbar-tab-height {
+    min-height: unset !important;
+    .MuiTabs-flexContainer {
+      .MuiTab-root {
+        font-size: 1.4rem;
+        letter-spacing: .1rem;
+        padding: 1.1rem 1.2rem .9rem 1.2rem;
+        min-height: unset;
+        outline:none;
+      }
+    }
+  }
+}
+
+.dropdown-tabs{
+  color: map-get($theme-colors, primary);
+  margin: .1rem 0 0 auto;
+
+a{
+  &:hover, &:focus, &:active{
+    color: map-get($theme-colors, primary);
+  }
+}
+.dropdown-list{
+  width:20.0rem;
+  box-shadow: 0.2rem 0.3rem 0.5rem 0.1rem $main-text-transparent;
+  border: none;
+  .dropdown-list-item{
+    color: map-get($theme-colors, primary);
+    font-size: 1.3rem;
+    padding: .7rem 2.0rem;
+    letter-spacing: 0.06rem;
+    @extend .nunito-thick;
+    &:hover{
+      color:$white;
+      background-color: map-get($theme-colors, primary);
+    }
+  }
+}
+
+  .dropdown-tab-item{
+    font-weight: 900;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+
+    &:hover, &:focus, &:active{
+      color: map-get($theme-colors, primary);
+    }
+  }
+
+  .MuiSvgIcon-root{
+    &:hover, &:focus, &:active{
+      color: map-get($theme-colors, primary);
+    }
+  }
+}
+
+  .edit-controls{
+    margin: 0 -17px 0 auto;
+    width: 16.2rem;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .edit-controls{
+      margin:0;
+      width: 16.2rem;
+    }
+  }
+
+  @media only screen and (max-width: map-get($secondary-breakpoints, xs)) {
+    .sticky-characterization{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 2rem;
+        }
+      }
+    }
+
+    .sticky-navBar-Admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 5.0rem;
+          .companies-fix{
+            width: 1rem;
+          }
+
+        } 
+      }
+    }
+  }
+
+  @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+    .sticky-navBar-Admin{
+      .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 25rem;
+
+        &.companies-fix{
+          width: 16rem;
+        }
+      }
+    }
+
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 23rem;
+          &.companies-fix{
+            width: 12rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, md)) {
+  .sticky-navBar-Admin {
+    .add-icon{
+      padding: 0rem .6rem 0 .6rem;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (min-width: 440px) and (max-width:500px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 16.7rem;
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($secondary-breakpoints, md)) and (max-width:440px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 14.3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) and (min-width: map-get($secondary-breakpoints, md)){
+  .sticky-navBar-Admin{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 28rem;
+
+        &.companies-fix{
+          width: 19rem;
+        }
+        
+      }
+    }
+
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+          .dropdown-tab-item{
+            &.companies-fix{
+              width: 12rem;
+            }
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 414px) and (min-width: 400px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 12.4rem;
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 22rem;
+
+          &.companies-fix{
+            width: 11rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) and (min-width: 380px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 10.4rem;
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 21rem;
+
+          &.companies-fix{
+            width: 9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) and (min-width: 370px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 9.4rem;
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 25rem;
+
+        &.companies-fix{
+          width: 14rem;
+        }
+      }
+    }
+  
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 19rem;
+
+          &.companies-fix{
+            width: 9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) and (min-width: 361px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 9.1rem;
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 24rem;
+
+        &.companies-fix{
+          width: 14rem;
+        }
+      }
+    }
+
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 18rem;
+
+          &.companies-fix{
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 361px) and (min-width: 351px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 7.4rem;
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 23.3rem;
+
+        &.companies-fix{
+          width: 13rem;
+        }
+      }
+    }
+    
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 17rem;
+
+          &.companies-fix{
+            width: 7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 351px) and (min-width: 340px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 6.4rem;
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+  .dropdown-tabs{
+    .dropdown-tab-item{
+      width: 21.3rem;
+
+      &.companies-fix{
+        width: 12rem;
+      }
+    }
+
+    
+      &.fixed-nav-admin{
+        .dropdown-tabs{
+          .dropdown-tab-item{
+            width: 17rem;
+
+            &.companies-fix{
+              width: 20rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 16rem;
+
+          &.companies-fix{
+            width: 6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 340px) and (min-width: 320px){
+  .sticky-characterization{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 4.3rem;
+      }
+    }
+  }
+
+  .sticky-navBar-Admin{
+    .dropdown-tabs{
+      .dropdown-tab-item{
+        width: 19.3rem;
+
+        &.companies-fix{
+          width: 9rem;
+        }
+      }
+    }
+
+    &.fixed-nav-admin{
+      .dropdown-tabs{
+        .dropdown-tab-item{
+          width: 13rem;
+
+          &.companies-fix{
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

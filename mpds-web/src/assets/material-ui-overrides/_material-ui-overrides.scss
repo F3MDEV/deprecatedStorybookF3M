@@ -1,0 +1,35 @@
+.MuiDialogContent-dividers{
+    border-top: none !important;
+}
+
+.MuiButtonBase-root {
+    outline: none;
+    &:focus{
+        outline: none; 
+    }
+}
+
+.MuiExpansionPanel-root{
+    &.Mui-expanded {
+        &.custom-expanded-margin{
+            margin: 2.5rem 0 !important;
+        }
+    }
+    .d-flex{
+        .MuiTypography-subtitle2{
+            font-weight: 400;
+        }
+    }
+}
+
+.MuiLink-underlineHover:hover {
+    text-decoration: none !important;
+}
+
+.MuiDialog-root{
+    z-index: 11300 !important;
+}
+
+.MuiAutocomplete-popper{
+    z-index: 11301 !important;
+}

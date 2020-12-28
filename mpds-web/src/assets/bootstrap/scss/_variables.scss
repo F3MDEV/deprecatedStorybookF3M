@@ -1,0 +1,384 @@
+//Pedir à ana luisa:
+//Icons
+
+// small: 40px
+// normal: 56px
+
+$gray-50: #fafafa;
+$gray-100: #f5f5f5;
+$gray-200: #eeeeee;
+$gray-300: #e0e0e0;
+$gray-400: #bdbdbd;
+$gray-500: #9e9e9e;
+$gray-600: #757575;
+$gray-700: #444444;
+$gray-800: #424242;
+$gray-900: #212121;
+
+$red: #f44336;
+$pink: #ff85af;
+$purple: #d559ea;
+$deep-purple: #673ab7;
+$indigo: #3f51b5;
+$blue-grey: #5c7d9c;
+$blue: #0094d4;
+$light-blue: #03a9f4;
+$cyan: #00bcd4;
+$teal: #39bbb0;
+$green: #4caf50;
+$light-green: #8bc34a;
+$lime: #cddc39;
+$yellow: #ffeb3b;
+$sunglow: #ffca3a;
+$amber: #ffc107;
+$orange: #ff9800;
+$deep-orange: #ff5722;
+$sunset-orange: #ff595e;
+$brown: #795548;
+$grey: #9e9e9e;
+$black: #000000;
+$white: #ffffff;
+$white-smoke: #f2f2f2;
+$error-background: #EEF2F3;
+$no-records: #DADADA;
+
+// Theme Colors
+$theme-colors: (
+  primary: #4CB3BA,
+  secondary: #019ea9,
+  success: $green,
+  info: $light-blue,
+  warning: $amber,
+  danger: $red,
+  dark: $gray-700
+);
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+);
+
+$grid-breakpoints-no-px: (
+  xs: 568,
+  sm: 667,
+  md: 768,
+  lg: 992,
+  xl: 1220,
+  xxl: 1440,
+);
+
+$secondary-breakpoints: (
+  /* xs: 32.0rem,
+  md:  42.0rem,
+  lgToogleHeader: 40.8rem,
+  mdToogleHeader: 47.0rem,
+  smToogleHeader: 34.0rem,
+  xsToogleHeader: 75.0rem, */
+  xs: 320px,
+  md: 420px,
+  lgToogleHeader: 408px,
+  mdToogleHeader: 470px,
+  smToogleHeader: 340px,
+  xsToogleHeader: 750px,
+);
+
+// Theme Colors Light
+$theme-colors-light: (
+  primary: lighten(map-get($theme-colors, primary), 37%),
+  secondary: lighten(map-get($theme-colors, secondary), 37%),
+  success: lighten(map-get($theme-colors, success), 37%),
+  info: lighten(map-get($theme-colors, info), 37%),
+  warning: lighten(map-get($theme-colors, warning), 37%),
+  danger: lighten(map-get($theme-colors, danger), 37%),
+  dark: lighten(map-get($theme-colors, dark), 37%)
+);
+
+// Theme Colors Dark
+$theme-colors-dark: (
+  primary: darken(map-get($theme-colors, primary), 10%),
+  secondary: darken(map-get($theme-colors, secondary), 10%),
+  success: darken(map-get($theme-colors, success), 10%),
+  info: darken(map-get($theme-colors, info), 10%),
+  warning: darken(map-get($theme-colors, warning), 10%),
+  danger: darken(map-get($theme-colors, danger), 10%),
+  dark: darken(map-get($theme-colors, dark), 10%)
+);
+
+// Buttons
+$btn-box-shadow: 0 2px 2px 0 rgba($black, 0.12);
+$btn-focus-box-shadow: 0 2px 2px 0 rgba($black, 0.2);
+$btn-active-box-shadow: $btn-focus-box-shadow;
+$input-btn-padding-y: 0.6rem;
+$input-btn-padding-x: 1rem;
+$input-btn-line-height: 1.154;
+$input-btn-padding-y-sm: 0.25rem;
+$input-btn-padding-x-sm: 0.55rem;
+$input-btn-line-height-sm: 1.5;
+$input-btn-line-height-lg: 1.5;
+
+// Typography
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-primary:"Roboto";
+$font-secondary:"Nunito";
+$main-text:#494949;
+$main-text-disabled: #b2b2b2;
+$main-text-transparent: #4949492a;
+$text-muted: #9c9c9c;
+$headings-color: #333;
+
+$font-weight-bold: 800;
+
+$font-family-icon: "Material-Design-Iconic-Font";
+$font-size-root: 13px;
+
+// Links
+$link-color: $light-blue;
+$link-hover-decoration: none;
+
+// Body
+$body-bg: #f3f3f3;
+$body-color: #707070;
+
+// Form
+$input-bg: transparent;
+$input-disabled-bg: transparent;
+$input-box-shadow: rgba(0, 0, 0, 0);
+$input-border-color: lighten($gray-200, 1%);
+$input-focus-border-color: $input-border-color;
+$input-border-radius: 0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
+$form-group-margin-bottom: 2rem;
+$input-focus-box-shadow: none;
+
+// Custom Forms
+$custom-control-indicator-box-shadow: none;
+$custom-control-indicator-focus-box-shadow: none;
+$custom-control-indicator-size: 1.308rem;
+$custom-control-indicator-bg: transparent;
+$custom-control-gutter: 2rem;
+$custom-checkbox-indicator-icon-checked: none;
+$custom-radio-indicator-icon-checked: none;
+$custom-control-indicator-checked-bg: transparent;
+$custom-control-indicator-active-color: $white;
+$custom-control-indicator-active-bg: transparent;
+$custom-control-indicator-disabled-bg: transparent;
+$custom-control-indicator-checked-color: $white;
+
+// Layout
+$content-title-heading-color: #676767;
+
+// Header
+$header-height: 55px;
+$header-shadow: 0 1px 10px rgba($black, 0.2);
+$header-z-index: 10;
+
+//Navbar border-bottom
+$navbar-border-bottom: #A9DADB;
+
+// Dropdown
+$dropdown-border-width: 0;
+$dropdown-border-color: transparent;
+$dropdown-box-shadow: 0 4px 18px rgba($black, 0.11);
+$dropdown-link-color: #6d6d6d;
+$dropdown-link-active-color: $dropdown-link-color;
+$dropdown-link-active-bg: $gray-200;
+$dropdown-padding-y: 0.8rem;
+$dropdown-item-padding-x: 1.5rem;
+$dropdown-item-padding-y: 0.5rem;
+$dropdown-spacer: 0;
+
+// Border Radius
+$border-radius: 2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
+
+// List Group
+$list-group-bg: transparent;
+$list-group-border-width: 0;
+$list-group-hover-bg: black;
+$list-group-active-bg: $light-blue;
+$list-group-item-padding-x: 2rem;
+$list-group-item-padding-y: 1rem;
+
+// Progress Bar
+$progress-box-shadow: none;
+$progress-bar-color: $blue-grey;
+$progress-bg: $gray-200;
+$progress-height: 3px;
+
+// Card
+$card-inner-border-radius: $border-radius;
+$card-border-color: transparent;
+$card-border-radius: $border-radius;
+$card-spacer-x: 2.2rem;
+$card-spacer-y: 2.1rem;
+$card-cap-bg: transparent;
+$card-img-overlay-padding: 0;
+$card-shadow: 0 1px 2px rgba($black, 0.075);
+$card-columns-margin: 2.3rem;
+
+// Sidebars
+$sidebar-speed: 0.3s;
+$sidebar-width: 270px;
+$sidebar-z-index: $header-z-index - 1;
+$navigation-link-color: #424242;
+$navigation-link-active-color: $white;
+$navigation-link-active-bg: rgba($black, 0.03);
+$navigation-link-hover-bg: #ebedef;
+
+// Tabels
+$table-border-color: lighten($gray-200, 3%);
+$table-inverse-bg: $gray-700;
+$table-inverse-border-color: lighten($gray-700, 5%);
+$table-accent-bg: $table-border-color;
+$table-hover-bg: $table-accent-bg;
+$table-cell-padding: 1rem 1.5rem;
+$table-cell-padding-sm: 0.75rem 1rem;
+$table-head-bg: lighten($gray-200, 3%);
+
+// Pagination
+$pagination-border-width: 0;
+$pagination-padding-y: 0;
+$pagination-padding-x: 0;
+$pagination-bg: $gray-200;
+$pagination-hover-bg: darken($pagination-bg, 5%);
+$pagination-color: lighten($body-color, 10%);
+$pagination-hover-color: darken($pagination-color, 5%);
+$pagination-disabled-bg: $pagination-bg;
+$pagination-disabled-color: $pagination-color;
+$pagination-active-bg: lighten($light-blue, 10%);
+
+// Input Group
+$input-group-addon-border-color: $input-border-color;
+$input-group-addon-bg: transparent;
+
+// Code
+$pre-color: $white;
+$pre-bg: $gray-800;
+$pre-border-color: $pre-bg;
+
+// Alert
+$alert-padding-y: 18px;
+$alert-padding-x: 24px;
+$alert-link-font-weight: normal;
+$alert-border-width: 0;
+
+// Close
+$close-font-weight: normal;
+$close-text-shadow: none;
+
+// Badges
+$badge-padding-y: 0.4rem;
+$badge-padding-x: 0.55rem;
+$badge-font-size: 85%;
+$badge-font-weight: 500;
+
+// Breadcrumbs
+$breadcrumb-divider: "\f30f";
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-x: 0.25rem;
+
+// Carosuel
+$carousel-control-prev-icon-bg: none;
+$carousel-control-next-icon-bg: none;
+$carousel-control-icon-width: 40px;
+$carousel-control-opacity: 0.8;
+$carousel-caption-color: rgba($white, 0.9);
+
+// Modal
+$modal-backdrop-opacity: 0.5;
+$modal-content-box-shadow-xs: 0 5px 20px rgba($black, 0.07);
+$modal-content-box-shadow-sm-up: $modal-content-box-shadow-xs;
+$modal-content-border-width: 0;
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+$modal-header-padding: 25px 30px 0;
+$modal-inner-padding: 25px 30px;
+
+// Popovers
+$popover-border-width: 0;
+$popover-box-shadow: 0 2px 30px rgba($black, 0.1);
+$popover-arrow-outer-color: transparent;
+$popover-inner-padding: 15px 10px;
+$popover-header-bg: $white;
+
+// Sortable
+$sortable-border-color: $gray-100;
+
+// Tabs
+$nav-tabs-border-width: 2px;
+$nav-tabs-border-color: $gray-200;
+$nav-tabs-border-radius: 0;
+$nav-link-padding-y: 1rem;
+$nav-link-padding-x: 1.2rem;
+$nav-link-padding: 1rem 1.2rem;
+$nav-tabs-link-active-bg: $white;
+
+// Tooltips
+$tooltip-padding-y: 0.7rem;
+$tooltip-padding-x: 1.1rem;
+$tooltip-bg: $gray-700;
+$tooltip-arrow-color: $tooltip-bg;
+$tooltip-opacity: 1;
+
+// Backdrop
+$backdrop-z-index: 100;
+
+// Listview
+$listview-item-active-bg: $gray-100;
+$listview-item-hover-bg: $gray-100;
+$listview-item-striped-bg: $gray-100;
+$listview-invert-item-active-bg: rgba($white, 0.025);
+$listview-invert-item-hover-bg: rgba($white, 0.025);
+$listview-invert-item-striped-bg: rgba($white, 0.1);
+$listview-border-color: $gray-100;
+
+// HR
+$hr-border-color: darken($gray-100, 2%);
+
+// WoundsCard
+$wounds-closed-bar: #3E3E3E;
+$wounds-opened-bar: #D9746F;
+
+//hr-border-color-report
+$hr-border-color-report: #dbdbdb;
+
+:export {
+  primary: map-get($theme-colors, primary);
+  secondary: map-get($theme-colors, secondary);
+  error-background: $error-background;
+  success: $green;
+  info: $light-blue;
+  warning: $amber;
+  danger: $red;
+  dark: $gray-700;
+  mainText: $main-text;
+  white: $white;
+  //grid
+  gridBreakLg: map-get($grid-breakpoints, lg);
+  gridBreakMd: map-get($grid-breakpoints, md);
+  gridBreakSm: map-get($grid-breakpoints, sm);
+  //ToogleHeader breapoints
+  lgToogleHeader: map-get($secondary-breakpoints, lgToogleHeader);
+  mdToogleHeader: map-get($secondary-breakpoints, mdToogleHeader);
+  smToogleHeader: map-get($secondary-breakpoints, smToogleHeader);
+  xsToogleHeader: map-get($secondary-breakpoints, xsToogleHeader);
+  primaryFont: $font-primary;
+  secondaryFont: $font-secondary;
+  xsNoPx: map-get($grid-breakpoints-no-px, xs); //568,
+  smNoPx: map-get($grid-breakpoints-no-px, sm); //667,
+  mdNoPx: map-get($grid-breakpoints-no-px, md); //768,
+  lgNoPx: map-get($grid-breakpoints-no-px, lg); //992,
+  xlNoPx: map-get($grid-breakpoints-no-px, xl); //1220,
+  xxlNoPx: map-get($grid-breakpoints-no-px, xxl); //1440,
+}
+

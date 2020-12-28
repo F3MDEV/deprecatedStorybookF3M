@@ -1,0 +1,242 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.list-filters-container{
+    &.MuiBox-root{
+.list-filters{
+    display: flex;
+    .MuiListItem-root{
+        width:auto;
+
+        &.remove-padding-right{
+            padding-right: 0;
+        }
+
+        &.add-padding-right{
+            padding-right: 1rem;
+        }
+    }
+}
+}
+}
+
+//fixed empty pixel
+.MuiToggleButtonGroup-root{   
+    .MuiToggleButtonGroup-grouped:not(:first-child) {
+        margin-left: 0;
+        border-left: 0;
+    }
+}
+
+.fix-date-margin-top{
+    &.MuiFormControl-marginNormal{
+        margin-top:0px;
+    }
+}
+
+.fix-height-input-state{
+    height: 60px;
+
+    .MuiButtonBase-root{
+        outline: none;
+    }
+}
+
+.number-of-records{
+    font-size: 1.2rem;
+    font-family: $font-primary;
+}
+
+.sort-check-icon{
+    &.MuiSvgIcon-root{
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+.title-search{
+    font-size: 2.4rem;
+}
+
+.filter-expand{
+    &.MuiExpansionPanel-rounded{
+        border-bottom-left-radius: .4rem;
+        border-bottom-right-radius: .4rem;
+    }
+
+    .MuiExpansionPanelSummary-root{
+        min-height: 3.7rem;
+
+        &.Mui-expanded{
+            min-height: 3.7rem;
+        }
+
+        .MuiIconButton-edgeEnd{
+            &.MuiIconButton-root{
+                padding: 5px;
+            }
+        }
+    }
+
+    .MuiExpansionPanelSummary-content{
+        margin: 2px 0;
+
+        &.Mui-expanded{
+            margin: 2px 0;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, sm)) and (max-width: map-get($grid-breakpoints, md)){
+    .fix-date-margin-top{
+        &.MuiFormControl-marginNormal{
+            margin-top:16px;
+        }
+    }
+
+    .fix-date-margin-top-md{
+        &.MuiFormControl-marginNormal{
+            margin-top:0px;
+        }
+    }
+
+    .ajust-margin-top{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, sm)){
+    .list-filters-container{
+        &.MuiBox-root{
+            .list-filters{
+                display: unset;
+                .MuiList-padding{
+                    padding-top: 1.5rem;
+                }
+                .MuiListItem-root{
+                    width:100%;
+                }
+            }
+        }
+    }
+    .card-list-view{
+        .card-list-view-item{
+            padding-right:0;
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)){
+    .number-of-records{
+        font-size: 1rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)){
+    .card-list-view{
+        .card-list-view-item{
+            &.col-xl-3{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            } 
+            &.col-lg-4{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .title-search{
+        font-size: 2rem;
+    }
+    .card-list-view{
+        .card-list-view-item:nth-child(2n-3) {
+            padding-left: 0 !important;
+        }
+        .card-list-view-item:nth-child(2n+2) {
+            padding-right: 0 !important;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .list-filters-container{
+        &.MuiBox-root{
+            padding-left: 1rem;
+            float: right;
+        }
+    }
+
+    .card-list-view{
+        .card-list-view-item:nth-child(3n-2) {
+            padding-left: 0 !important;
+            padding-right: 1rem !important;
+        }
+
+        .card-list-view-item:nth-child(3n+3) {
+            padding-right: 0 !important;
+            padding-left: 1rem !important;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)){
+    .list-filters-container{
+        &.MuiBox-root{
+            padding-left: 1rem;
+            float: right;
+        }
+    }
+
+    .card-list-view{
+        .card-list-view-item:nth-child(4n-7) {
+            padding-left: 0 !important;
+            padding-right: 1rem !important;
+        }
+       
+        .card-list-view-item:nth-child(4n+4) {
+            padding-right: 0 !important;
+            padding-left: 1rem !important;
+        }
+    }
+}
+
+.dropdown-shadow{
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
+
+    &.border-none{
+        border: 0;
+      }
+      
+}
+
+.sort-for{
+    color: $main-text;
+    &:hover{
+        color: $main-text;
+        font-weight: 500;
+    }
+}
+
+//override
+.Mui-selected{
+    .MuiListItemText-root{
+        .MuiTypography-root{
+            &.MuiTypography-body1{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.MuiListItemText-root{
+    .MuiTypography-root{
+        &.MuiTypography-body1{
+            font-size: 1.4rem;
+        }
+    }
+}
+

@@ -1,0 +1,72 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.btn-add-institution{
+    width: 3.6rem;
+    min-width: 3.6rem !important;
+    height: 3.2rem;
+    padding-top: .5rem !important;
+
+    .MuiButton-root {
+        color: #494949;
+        padding: 4px 16px;
+    }
+}
+
+.switch-user-margin-fix{
+    margin-left: -11px;
+}
+
+.form-dialog{
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column
+}
+
+.add-and-edit-title{
+    font-size: 1.6rem;
+}
+
+@media (min-width: 310px) and (max-width: 352px)  {
+    .add-and-edit-title{
+        font-size: 1.1rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: .6rem !important;
+    }
+}
+
+@media (min-width: 352px) and (max-width: 400px) {
+    .add-and-edit-title{
+        font-size: 1.1rem !important;
+        margin-top: 2rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+}
+
+@media (min-width: 401px) and (max-width: map-get($grid-breakpoints, md)) {
+    .add-and-edit-title{
+        font-size: 1.4rem !important;
+        margin-top: 1.8rem !important;
+        margin-bottom: 1.1rem !important;
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+    .form-user-content{
+        .container-photo-user{
+            margin-bottom: 2.5rem;
+        }        
+
+        /* .MuiDialogContent-root {
+            overflow-y: unset;
+        } */
+    }
+}
+
+/* @media (max-width: map-get($grid-breakpoints, md)) {
+    .edit-add-user-title{
+        &.MuiDialogTitle-root {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    }
+} */

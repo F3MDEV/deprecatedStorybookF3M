@@ -1,0 +1,54 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.border-img-usr{
+    border: 2px solid #DCDCDC;
+}
+
+.table-cell-custom-size{
+    width: 2rem;
+    .dropdown-item{
+        &:hover{
+            color: map-get($theme-colors, primary);
+            text-decoration: none;
+            background-color: #fff;
+        }
+
+        &:focus {
+            color: map-get($theme-colors, primary) !important;
+            text-decoration: none;
+            background-color: #fff;
+        }
+    } 
+
+    .custom-icon-font-size{
+        font-size: 2.2rem;
+    }
+
+    .dropdown-menu-user-grid{
+        box-shadow: 0.2rem 0.3rem 0.5rem 0.1rem #4949492a;
+        .dropdown-item{
+            padding: .25rem 2rem .25rem 0.7rem;
+        }
+    }
+}
+
+    .tag-profile{
+        width: 240px;
+        background: $white;
+        border: .1rem solid map-get($theme-colors, primary);
+        border-radius: 5rem;
+        padding: .4rem;
+        color: map-get($theme-colors, primary);
+        opacity: 1;
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin: 2px;
+        max-width: calc(100% - 4px);
+    }
+
+
+    @media only screen and (max-width: map-get($grid-breakpoints, md)) {
+        .tags-parent{
+            min-width: 170px;  
+        }
+    }

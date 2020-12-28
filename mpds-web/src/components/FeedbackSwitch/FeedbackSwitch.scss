@@ -1,0 +1,11 @@
+@import "../../assets/bootstrap/scss/variables";
+
+.switch-on{
+    font-size: 1.4rem;
+    color: map-get($theme-colors, secondary);
+}
+
+.switch-off{
+    font-size: 1.4rem;
+    color: $main-text;
+}

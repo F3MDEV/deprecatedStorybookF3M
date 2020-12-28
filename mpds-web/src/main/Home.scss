@@ -1,0 +1,8 @@
+@import "../assets/bootstrap/scss/variables";
+
+@media (max-width: map-get($grid-breakpoints, sm)){
+    .sm-footer{
+      text-align: center;
+      width: 100%;
+    }
+  }
