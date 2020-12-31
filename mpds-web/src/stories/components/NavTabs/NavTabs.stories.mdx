@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import NavTabs from './NavTabs';
+
+<Meta title="Components/NavTabs" component={NavTabs}/>
+
+# Slider Arrow
+
+Documentação em falta.
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <NavTabs {...args} />
+
+<Canvas>
+  <Story name="NavTabs"
+    args={{
+      onChangeTabs: "",
+      tabsIndicatorColor: "primary",
+      backButtonDisable: false,
+      editControlsContainer: "ff",
+      editControlsRoot: "",
+      hiddenEditControls: false,
+      onClickToggleDropdown: "",
+      arrowToggleDropdownClasses: "",
+      onClickGoBack: "",
+      toggleDropdownTitle: "Report",
+      hrefToggleDropdown: "/",
+      backButtonTitle: "Previous"
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>
