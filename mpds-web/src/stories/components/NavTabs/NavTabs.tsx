@@ -43,10 +43,6 @@ export interface NavTabsProps {
       */
   editControlsRoot?: string
   /**
-      * Insert elements in Edit Controls
-      */
-  editControlsContainer?: HTMLElement
-  /**
       * Hide Edit Controls
       */
   hiddenEditControls?: boolean
@@ -74,6 +70,34 @@ export interface NavTabsProps {
       * Text aligned to the right of back button
       */
   backButtonTitle?: string
+  /**
+      * Text aligned to the right of back button
+      */
+  dropDownItems?: Array<string>
+  /**
+      * Text aligned to the right of back button
+      */
+  onClickCreate?:any
+  /**
+      * Text aligned to the right of back button
+      */
+  disableCreate?:any
+  /**
+      * Text aligned to the right of back button
+      */
+  onClickSave?:any
+  /**
+      * Text aligned to the right of back button
+      */
+  disableSave?:any
+  /**
+      * Text aligned to the right of back button
+      */
+  onClickClear?:any
+  /**
+      * Text aligned to the right of back button
+      */
+  disableClear?:any
 }
 
 const secondaryFont = variables.secondaryFont
@@ -82,7 +106,6 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
   onChangeTabs,
   tabsIndicatorColor= "primary",
   backButtonDisable = false,
-  editControlsContainer = "ff",
   editControlsRoot,
   hiddenEditControls = false,
   onClickToggleDropdown,
@@ -90,7 +113,14 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
   onClickGoBack,
   toggleDropdownTitle = "Report",
   hrefToggleDropdown = "/",
-  backButtonTitle = "Previous"
+  backButtonTitle = "Previous",
+  dropDownItems = ["Section1", "Section2", "Section3"],
+  onClickCreate,
+  disableCreate,
+  onClickSave,
+  disableSave,
+  onClickClear,
+  disableClear
 }) => {
 
   const useStyles = makeStyles(theme => ({
@@ -266,9 +296,10 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
           as={CustomToggleInstitution}>
         </Dropdown.Toggle>
         <Dropdown.Menu alignRight className={`${styleClass.pt3} ${styleClass.pb4} ${styleClass.dropdownList}`}>
-          <Dropdown.Item as="button" className={`${styleClass.dropdownListItem} ${styleClass.textUppercase}`}>Patient Detail</Dropdown.Item>
-          <Dropdown.Item as="button" className={`${styleClass.dropdownListItem} ${styleClass.textUppercase}`}>Characterization</Dropdown.Item>
-          <Dropdown.Item as="button" className={`${styleClass.dropdownListItem} ${styleClass.textUppercase}`}>Report</Dropdown.Item>
+          {dropDownItems.map((item, index) => (
+            <Dropdown.Item as="button" className={`${styleClass.dropdownListItem} ${styleClass.textUppercase}`}>{item}</Dropdown.Item>
+          ))
+          }
         </Dropdown.Menu>
       </Dropdown>
       <Tabs
@@ -277,9 +308,11 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
         textColor="primary"
         onChange={onChangeTabs}
         value={0}>
-          <Tab label="Section One" key={0} />
-          <Tab className={`${styleClass.opacity50}`} label="Section Two" key={1} />
-          <Tab className={`${styleClass.opacity50}`} label="Section Three" key={2} />
+
+        {dropDownItems.map((item, index) => (
+            <Tab label={item} value={index}/>
+          ))
+        }
       </Tabs>
     </>
 
@@ -288,31 +321,51 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
       <div className={`${styleClass.borderNav} ${styleClass.navContainer}`} id="nav-container">
         <div className={`${styleClass.dFlex}`}>
           <ButtonBase
-              className={`${backButtonDisable ? styleClass.opacity50 : ""} ${styleClass.pr3} ${styleClass.prLg0} ${styleClass.mb2} ${styleClass.outlineNone}`}
-              disableRipple
-              disableTouchRipple
-              focusRipple
-              type="submit"
-              disabled={backButtonDisable}
-              onClick={onClickGoBack}
-              >
-                <IconButton
-                    className={`${styleClass.mr1} ${styleClass.navbarReturn} ${styleClass.outlineNone}`}
-                    color="primary">
-                    <ArrowBackIcon fontSize={'large'} className={`${styleClass.iconLargeSizeCustom}`}/>
-                </IconButton>
-                <Box
-                    fontSize={20}
-                    fontWeight={700}
-                    color="primary"
-                    className={`${styleClass.textUppercase} ${styleClass.pr5} ${styleClass.dNone} ${styleClass.dMdBlock} ${styleClass.nunitoFont}`}>
-                    {backButtonTitle}
-                </Box>
+            className={`${backButtonDisable ? styleClass.opacity50 : ""} ${styleClass.pr3} ${styleClass.prLg0} ${styleClass.mb2} ${styleClass.outlineNone}`}
+            disableRipple
+            disableTouchRipple
+            focusRipple
+            type="submit"
+            disabled={backButtonDisable}
+            onClick={onClickGoBack}
+            >
+              <IconButton
+                  className={`${styleClass.mr1} ${styleClass.navbarReturn} ${styleClass.outlineNone}`}
+                  color="primary">
+                  <ArrowBackIcon fontSize={'large'} className={`${styleClass.iconLargeSizeCustom}`}/>
+              </IconButton>
+              <Box
+                  color="#3f51b5"
+                  fontSize={20}
+                  fontWeight={700}
+                  className={`${styleClass.textUppercase} ${styleClass.pr5} ${styleClass.dNone} ${styleClass.dMdBlock} ${styleClass.nunitoFont}`}>
+                  {backButtonTitle}
+              </Box>
           </ButtonBase>
           {tabs}
-            <div className={`${styleClass.editControls} ${editControlsRoot} `} hidden={hiddenEditControls}>
-                {editControlsContainer}
-            </div>
+            <div className={`${styleClass.editControls} ${editControlsRoot}`} hidden={hiddenEditControls}>
+              <IconButton color="primary"
+                  className={`${styleClass.marginFixIcon} ${styleClass.outlineNone}`}
+                  onClick={onClickCreate}
+                  disabled={disableCreate}
+                  centerRipple>
+                  <CreateIcon fontSize="large" className={`${styleClass.iconLargeSizeCustom}`}/>
+              </IconButton>
+            <IconButton color="primary"
+                 className={`${styleClass.marginFixIcon} ${styleClass.outlineNone}`}
+                 onClick={onClickSave}
+                 disabled={disableSave}
+                 id="sabeButtonCharacterisation"
+                 >
+                 <SaveIcon fontSize="large" className={`${styleClass.iconLargeSizeCustom}`}/>
+             </IconButton>
+             <IconButton color="primary"
+               className={`${styleClass.marginFixIcon} ${styleClass.outlineNone}`}
+               onClick={onClickClear}
+               disabled={disableClear}>
+              <ClearIcon fontSize="large" className={`${styleClass.iconLargeSizeCustom}`}/>
+            </IconButton>
+          </div>
         </div>
       </div>
     </>
@@ -320,30 +373,6 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
 }
 
 export default NavTabs;
-
-// <IconButton color="primary"
-//     className={`${styleClass.marginFixIcon} ${styleClass.outlineNone}`}
-//     /* onClick={() => this.changeStateToUpdateOrRead("ALT")}
-//     disabled={!showButtonAlt} */
-//     centerRipple>
-//     <CreateIcon fontSize="large" className={`${styleClass.iconLargeSizeCustom}`}/>
-// </IconButton>
-// <IconButton color="primary"
-//     className={`${styleClass.marginFixIcon} ${styleClass.outlineNone}`}
-//     /* onClick={() => this.onSaveCharacterisation()}
-//     disabled={!this.props.editMode} */
-//     id="sabeButtonCharacterisation"
-//     >
-//     <SaveIcon fontSize="large" className={`${styleClass.iconLargeSizeCustom}`}/>
-// </IconButton>
-// <IconButton color="primary"
-//     className={`${styleClass.marginFixIcon} ${styleClass.outlineNone}`}
-//     /* onClick={() => this.onCancel()}
-//     disabled={!this.props.editMode} */
-//     >
-//     <ClearIcon fontSize="large" className={`${styleClass.iconLargeSizeCustom}`}/>
-// </IconButton>
-//
 
 /*
 class NavTabs extends React.Component {
