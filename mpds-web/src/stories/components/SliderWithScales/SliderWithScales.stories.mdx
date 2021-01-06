@@ -48,7 +48,12 @@ export const marks = [
 <Canvas>
   <Story
     name="MpDS SliderWithScales"
-    args={{ 
+    argTypes={{
+      sliderMainColor: { control: 'color' },
+      arrowTooltipColor: { control: 'color' },
+      tooltipColor: { control: 'color' }
+    }}
+    args={{
         numberOfStepsPerMove: 10,
         marksLabels: marks,
         thumbHTMLElement: 'span',
@@ -56,7 +61,7 @@ export const marks = [
         labelFormat: "Slider Value",
         barProps: "",
         sliderValue: "Slider Value",
-        className: "top-60 h-slider-scales",    
+        className: "top-60 h-slider-scales",
         name: "MpDS SliderWithScales",
         widthOfTheSlide: 250,
         sliderMainColor: "#4CB3BA",
@@ -70,9 +75,14 @@ export const marks = [
 ## F3M Slider
 
 <Canvas>
-  <Story 
+  <Story
     name="F3M Slider"
-    args={{ 
+    argTypes={{
+      sliderMainColor: { control: 'color' },
+      arrowTooltipColor: { control: 'color' },
+      tooltipColor: { control: 'color' }
+    }}
+    args={{
         numberOfStepsPerMove: 10,
         marksLabels: marks,
         thumbHTMLElement: 'span',
@@ -80,7 +90,7 @@ export const marks = [
         labelFormat: "Slider Value",
         barProps: "",
         sliderValue: "Slider Value",
-        className: "top-60 h-slider-scales",    
+        className: "top-60 h-slider-scales",
         name: "F3M Slider",
         widthOfTheSlide: 250,
     }}>

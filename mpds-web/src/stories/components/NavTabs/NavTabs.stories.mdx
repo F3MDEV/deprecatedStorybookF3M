@@ -4,7 +4,7 @@ import NavTabs from './NavTabs';
 
 <Meta title="Components/NavTabs" component={NavTabs}/>
 
-# Slider Arrow
+# Nav Tabs
 
 Documentação em falta.
 
@@ -16,20 +16,23 @@ export const Template = (args) => <NavTabs {...args} />
 
 <Canvas>
   <Story name="NavTabs"
+    argTypes={{
+      onChangeTabs: { action: 'You have just touched the tab!' },
+      onClickToggleDropdown: { action: 'Toggled dropdown!' },
+      onClickGoBack: { action: 'Going back!' },
+      onClickCreate: { action: 'Created!' },
+      onClickSave: { action: 'Saved!' },
+      onClickClear: { action: 'Cleared!' },
+    }}
     args={{
-      onChangeTabs: "",
       tabsIndicatorColor: "primary",
       backButtonDisable: false,
-      editControlsContainer: "ff",
       editControlsRoot: "",
       hiddenEditControls: false,
-      onClickToggleDropdown: "",
       arrowToggleDropdownClasses: "",
-      onClickGoBack: "",
       toggleDropdownTitle: "Report",
       hrefToggleDropdown: "/",
-      backButtonTitle: "Previous",
-      teste: ""
+      backButtonTitle: "Previous"
     }}>
     {Template.bind({})}
    </Story>

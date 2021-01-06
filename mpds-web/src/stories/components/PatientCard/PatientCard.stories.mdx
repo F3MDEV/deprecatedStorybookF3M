@@ -1,46 +1,68 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { Props } from '@storybook/addon-docs/blocks';
-import PatientCard from './patientCard';
+import PatientCard from './PatientCard';
 
 <Meta title="Components/PatientCard" component={PatientCard}/>
 
-# Slider Arrow
+# PatientCard
 
-Documentação em falta.
+Manage the information you want on this id card. Don't lose any trace of your patient!
 
 ## Component API
 
 <Props />
 
-export const Template = (args) => <PatientCard {...args} />
+export const Template = (args) => <PatientCard hasImage= {false}
+idCardName= "RUI MANUEL TEIXEIRA LOPES DO CARMO"
+idCardTypeDoc= "SNS"
+idCardIdentification= "1234567890"
+RoomCodeTopic= "R"
+RoomCode= "90"
+BedCodeTopic= "B"
+BedCode= "9"
+valueOneTitle= "Age"
+valueTwoTitle= "Gender"
+valueThreeTitle= "Occupation"
+valueFourTitle= "Nationality"
+valueFiveTitle= "Hospitalisation"
+valueOne= "51 (23.03.1969)"
+valueTwo= "Male"
+valueThree= "Teacher"
+valueFour= "PT"
+valueFive= "1009 days (18.01.2018)"
+colorBottomLink= "#4cb3ba"
+textOfBottomLink= "See All"
+colorText= "#494949"  />
 
 <Canvas>
   <Story name="MpDS Patient Card"
     argTypes={{
-         clickedLink: { action: 'You can see something happen here if you want to!' },
+      colorBottomLink: { control: 'color' },
+      colorText: { control: 'color' },
+      clickedLink: { action: 'You can see something happen here if you want to!' },
     }}
     args={{
-        hasImage: false,
-        idCardName: "RUI MANUEL TEIXEIRA LOPES DO CARMO",
-        idCardTypeDoc: "SNS",
-        idCardIdentification: "1234567890",
-        RoomCodeTopic: "R",
-        RoomCode: "90",
-        BedCodeTopic: "B",
-        BedCode: "9",
-        valueOneTitle: "Age",
-        valueTwoTitle: "Gender",
-        valueThreeTitle: "Occupation",
-        valueFourTitle: "Nationality",
-        valueFiveTitle: "Hospitalisation",
-        valueOne: "51 (23.03.1969)",
-        valueTwo: "Male",
-        valueThree: "Teacher",
-        valueFour: "PT",
-        valueFive: "1009 days (18.01.2018)",
-        colorBottomLink: "#4cb3ba",
-        textOfBottomLink: "See All",
-        colorText: "#494949"
+      hasImage: false,
+      idCardName: "RUI MANUEL TEIXEIRA LOPES DO CARMO",
+      idCardTypeDoc: "SNS",
+      idCardIdentification: "1234567890",
+      RoomCodeTopic: "R",
+      RoomCode: "90",
+      BedCodeTopic: "B",
+      BedCode: "9",
+      valueOneTitle: "Age",
+      valueTwoTitle: "Gender",
+      valueThreeTitle: "Occupation",
+      valueFourTitle: "Nationality",
+      valueFiveTitle: "Hospitalisation",
+      valueOne: "51 (23.03.1969)",
+      valueTwo: "Male",
+      valueThree: "Teacher",
+      valueFour: "PT",
+      valueFive: "1009 days (18.01.2018)",
+      colorBottomLink: "#4cb3ba",
+      textOfBottomLink: "See All",
+      colorText: "#494949"
     }}>
     {Template.bind({})}
    </Story>

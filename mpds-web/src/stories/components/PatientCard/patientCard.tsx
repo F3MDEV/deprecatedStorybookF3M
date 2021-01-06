@@ -16,115 +16,115 @@ export interface PatientCardProps {
     /**
         * Photo given to the IdCard.
         */
-    idCardPhoto?: any,
+    idCardPhoto?: any
     /**
         * If the card doesn't got an image, it will load a default avatar on it.
         */
-    hasImage?: boolean,
+    hasImage?: boolean
     /**
         * Name of the person in the card.
         */
-    idCardName?: string,
+    idCardName?: string
     /**
         * Type of the document.
         */
-    idCardTypeDoc?: string,
+    idCardTypeDoc?: string
     /**
         * Id of the card.
         */
-    idCardIdentification?: string,
+    idCardIdentification?: string
     /**
         * Code of the room.
         */
-    RoomCode?: string,
+    RoomCode?: string
     /**
         * Letter choseen for the room topic.
         */
-    RoomCodeTopic?: string,
+    RoomCodeTopic?: string
     /**
         * Code of the bed.
         */
-    BedCode?: string,
+    BedCode?: string
     /**
         * Letter choseen for the bed topic.
         */
-    BedCodeTopic?: string,
+    BedCodeTopic?: string
     /**
         * Title of the first value.
         */
-    valueOneTitle?: string,
+    valueOneTitle?: string
     /**
         * Title of the second value.
         */
-    valueTwoTitle?: string,
+    valueTwoTitle?: string
     /**
         * Title of the third value.
         */
-    valueThreeTitle?: string,
+    valueThreeTitle?: string
     /**
         * Title of the fourth value.
         */
-    valueFourTitle?: string,
+    valueFourTitle?: string
     /**
         * Title of the fifth value.
         */
-    valueFiveTitle?: string,
+    valueFiveTitle?: string
     /**
         * Value number one.
         */
-    valueOne?: string,
+    valueOne?: string
     /**
         * Value number two.
         */
-    valueTwo?: string,
+    valueTwo?: string
     /**
         * Value number three.
         */
-    valueThree?: string,
+    valueThree?: string
     /**
         * Value number four.
         */
-    valueFour?: string,
+    valueFour?: string
     /**
         * Value number five.
         */
-    valueFive?: string,
+    valueFive?: string
     /**
         * Name of the health professional.
         */
-    nameHealthProfessional?: string,
+    nameHealthProfessional?: string
     /**
         * Date of the next intervention.
         */
-    dateNextIntervention?: string,
+    dateNextIntervention?: string
     /**
         * Date of the last intervention.
         */
-    dateLastIntervention?: string,
+    dateLastIntervention?: string
     /**
         * Select Patient.
         */
-    selectPatient? : any,
+    selectPatient?: any
     /**
         * Select Intervention.
         */
-    selectIntervention? : any,
+    selectIntervention?: any
     /**
         * Color of the text.
         */
-    colorOfTheText?: string,
+    colorOfTheText?: string
     /**
         * Color of the bottom link.
         */
-    colorBottomLink? : string,
+    colorBottomLink?: string
     /**
         * Text given to the bottom link.
         */
-    textOfBottomLink?: string,
+    textOfBottomLink?: string
     /**
         * Callback when bottom link is clicked.
         */
-    clickedLink?: any,
+    clickedLink?: any
     /**
         * Color of the main text.
         */
@@ -211,7 +211,7 @@ const PatientCard: FunctionComponent<PatientCardProps> = ({
         },
         textUppercase:{
             textTransform: "uppercase",
-        },  
+        },
         myAuto:{
             marginTop: "auto",
             marginBottom: "auto"

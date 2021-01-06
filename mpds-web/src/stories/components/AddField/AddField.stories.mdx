@@ -4,9 +4,9 @@ import AddField from './AddField';
 
 <Meta title="Components/AddField" component={AddField}/>
 
-# Slider Arrow
+# Add Field
 
-Documentação em falta.
+Basic input with an add button.
 
 ## Component API
 
@@ -15,13 +15,14 @@ Documentação em falta.
 export const Template = (args) => <AddField {...args} />
 
 <Canvas>
-  <Story name="Normal" 
+  <Story name="Normal"
     argTypes={{
-        onAddClick: { action: 'Item added!' }
+        onAddClick: { action: 'Item added!' },
+        onChangeTextfield: { action: 'Input changed!' },
     }}
-    args={{ 
-        colorOfTheButton: "primary"
-        
+    args={{
+        colorOfTheButton: "primary",
+        disableButton: false,
     }}>
     {Template.bind({})}
    </Story>
