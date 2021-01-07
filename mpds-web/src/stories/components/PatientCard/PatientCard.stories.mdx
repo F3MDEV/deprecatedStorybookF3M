@@ -12,27 +12,7 @@ Manage the information you want on this id card. Don't lose any trace of your pa
 
 <Props />
 
-export const Template = (args) => <PatientCard hasImage= {false}
-idCardName= "RUI MANUEL TEIXEIRA LOPES DO CARMO"
-idCardTypeDoc= "SNS"
-idCardIdentification= "1234567890"
-RoomCodeTopic= "R"
-RoomCode= "90"
-BedCodeTopic= "B"
-BedCode= "9"
-valueOneTitle= "Age"
-valueTwoTitle= "Gender"
-valueThreeTitle= "Occupation"
-valueFourTitle= "Nationality"
-valueFiveTitle= "Hospitalisation"
-valueOne= "51 (23.03.1969)"
-valueTwo= "Male"
-valueThree= "Teacher"
-valueFour= "PT"
-valueFive= "1009 days (18.01.2018)"
-colorBottomLink= "#4cb3ba"
-textOfBottomLink= "See All"
-colorText= "#494949"  />
+export const Template = (args) => <PatientCard {...args} />
 
 <Canvas>
   <Story name="MpDS Patient Card"

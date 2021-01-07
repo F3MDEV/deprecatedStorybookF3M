@@ -11,7 +11,7 @@ export interface AddFieldProps {
     /**
         * OnClick in the plus button
     */
-    onAddClick?: (e: React.MouseEvent<HTMLInputElement>) => void,
+    onAddClick?: any,
     /**
         * Disable plus button
     */
@@ -19,7 +19,7 @@ export interface AddFieldProps {
     /**
         * onChange of the input
     */
-    onChangeTextfield?: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    onChangeTextfield?: any,
     /**
         * Color given to the button
     */
