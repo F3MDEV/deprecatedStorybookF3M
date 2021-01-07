@@ -15,14 +15,14 @@ An arrow that belongs to a carousel. :smiley:
 export const Template = (args) => <SliderArrow {...args} />
 
 <Canvas>
-  <Story name="Default Arrow" 
+  <Story name="Default Arrow"
     argTypes={{
         colorOfTheIcon: { control: 'color' },
         onClick: { action: 'Previous slider item' }
     }}
-    args={{ 
-        classes : 'span',
-        to : "prev",
+    args={{
+        classes: 'span',
+        to: "prev",
         colorOfTheIcon: "#03a9f4"
     }}>
     {Template.bind({})}

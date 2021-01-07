@@ -48,7 +48,7 @@ const BackToTop : FunctionComponent<BackToTopProps> = ({
                 <Fab onClick={handleClick as any} color="primary" size="small" aria-label="Scroll back to top." className={`${classes} ${styleClass.root}`}>
                     <KeyboardArrowUpIcon />
                 </Fab>
-          
+
         </Zoom>
     );
 }

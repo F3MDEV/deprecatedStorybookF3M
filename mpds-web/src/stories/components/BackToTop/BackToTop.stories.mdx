@@ -6,13 +6,16 @@ import BackToTop from './BackToTop';
 
 # Slider Arrow
 
-Documentação em falta.
+Scroll to the top of the page with this button.
 
 ## Component API
 
 <Props />
 
-export const Template = (args) => <BackToTop {...args} />
+export const Template = (args) => <BackToTop typeOfThePosition = "static"
+classes = ""
+timeOfTransition= {1000}
+/>
 
 <Canvas>
   <Story name="Normal"

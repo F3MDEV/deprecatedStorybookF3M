@@ -9,19 +9,19 @@ import AddIcon from '@material-ui/icons/Add';
 
 export interface AddFieldProps {
     /**
-        * A 
+        * OnClick in the plus button
     */
     onAddClick?: any,
     /**
-        * A preencher
+        * Disable plus button
     */
-    disableButton?: any,
+    disableButton?: boolean,
     /**
-        * A preencher
+        * onChange of the input
     */
-    onChangeTextfield?: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    onChangeTextfield?: any,
     /**
-        * A preencher
+        * Color given to the button
     */
     colorOfTheButton?: "inherit" | "default" | "primary" | "secondary" | undefined,
 }
@@ -65,7 +65,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const AddField = ({ onChangeTextfield, colorOfTheButton, onAddClick, disableButton }: AddFieldProps) => {
+const AddField = ({ onChangeTextfield,
+  colorOfTheButton,
+  onAddClick,
+  disableButton }: AddFieldProps) => {
 
     const styleClass = useStyles();
 
