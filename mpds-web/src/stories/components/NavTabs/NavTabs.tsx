@@ -114,7 +114,7 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
   toggleDropdownTitle = 'Report',
   hrefToggleDropdown = '/',
   backButtonTitle = 'Previous',
-  dropDownItems = ['Section1', 'Section2', 'Section3'],
+  dropDownItems = ['Section1', 'Section2', 'F3M'],
   onClickCreate,
   disableCreate,
   onClickSave,
@@ -234,7 +234,6 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
       }
     },
     dropdownTabs: {
-      //#19c97d
       color: '#4CB3BA',
       margin: '1px 0 0 auto'
     },
