@@ -114,7 +114,7 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
   toggleDropdownTitle = 'Report',
   hrefToggleDropdown = '/',
   backButtonTitle = 'Previous',
-  dropDownItems = ['Section1', 'Section2', 'F3M'],
+  dropDownItems = ['F3M', 'PIU', 'F3M'],
   onClickCreate,
   disableCreate,
   onClickSave,
