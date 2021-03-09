@@ -219,8 +219,8 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
       border: 'none'
     },
     dropdownListItem: {
-      //#19c97d
-      color: '#4CB3BA',
+      //#4CB3BA
+      color: '#19c97d',
       fontSize: 13,
       paddingTop: 7,
       paddingBottom: 7,
