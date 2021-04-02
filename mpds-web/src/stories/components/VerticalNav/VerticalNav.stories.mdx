@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import VerticalNavBar from './VerticalNav';
+
+<Meta
+  title='Components/VerticalNavBar'
+  component={VerticalNavBar}
+  parameters={{ layout: 'fullscreen' }}
+/>
+
+# VerticalNavBar
+
+A basic vertical navigation component! 😉 <br />
+You can extend it to read the title section. Check the props! 👋 <br />
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <VerticalNavBar {...args} />;
+
+<Canvas>
+  <Story
+    name='VerticalNavBar'
+    args={{
+      barExtended: false,
+      selectedNavTabBackground: '#3f51b534',
+      selectedNavTabBorderColor: '#3f51b5',
+      onClickToogleIcon: '',
+      isPositionFixed: true
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
