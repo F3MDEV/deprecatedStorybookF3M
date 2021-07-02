@@ -1,0 +1,67 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import F3MSearchTerminator from './F3MSearchTerminator';
+
+<Meta title="Components/F3MSearchTerminator" component={F3MSearchTerminator}/>
+
+# F3MSearchTerminator
+
+Search component with multiple attachment assets.
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <F3MSearchTerminator {...args} />
+
+<Canvas>
+  <Story
+    name="F3MSearchTerminator"
+    argTypes={{
+        backgroundColorInput: { control: 'color' },
+    }}
+    args={{
+        results: <>
+            <Table aria-label="simple table">
+                <TableBody>
+                    <TableRow>
+                        <TableCell component="td" scope="row" style={{ display: 'flex', alignItems: 'center' }}>
+                            <Avatar alt="Cesária Costa" src="../componentAssets/account-circle.svg" style={{ marginRight: 10 }} />
+                            Cesária Costa
+                        </TableCell>
+                        <TableCell>123456789</TableCell>
+                        <TableCell>86 anos</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+        </>,
+        aside,
+        showFilters: true,
+        value: '',
+        color: 'primary',
+        label: 'Search',
+        size: 'small',
+        variantTextfield: 'outlined',
+        inputWidth: 700,
+        showEmptyStateSearch: false,
+        showResults: false,
+        placeholderInput: "Search here!",
+        inputLabelClasses,
+        inputClasses,
+        startAdornmentInput: (
+            <InputAdornment position="start">
+                <SearchIcon color="primary" fontSize="large" />
+            </InputAdornment>
+        ),
+        endAdornmentInput: (
+            <InputAdornment position="end">
+                <IconButton
+                    size="small">
+                    <CloseIcon />
+                </IconButton>
+            </InputAdornment>
+        ),
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>
