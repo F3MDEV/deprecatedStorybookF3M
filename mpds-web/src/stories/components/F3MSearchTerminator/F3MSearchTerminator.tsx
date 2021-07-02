@@ -24,7 +24,7 @@ export interface SearchTerminatorProps {
     /**
     * Color of the input.
     */
-    color?: 'primary' | 'secondary;
+    color?: 'primary' | 'secondary';
     /**
    * Label of the input.
    */
