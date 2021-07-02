@@ -12,27 +12,27 @@ export interface SearchTerminatorProps {
     /**
     * Attach elements to the left side of the input.
     */
-    aside?: any;
+    aside?: any
     /**
     * It shows the results of the search when it has something.
     */
-    results?: any;
+    results?: any
     /**
     * Value in the input.
     */
-    value: any;
+    value: any
     /**
     * Color of the input.
     */
-    color?: 'primary' | 'secondary';
+    color?: 'primary' | 'secondary'
     /**
    * Label of the input.
    */
-    label?: string;
+    label?: string
     /**
    * Size of the input.
    */
-    size?: 'medium' | 'small';
+    size?: 'medium' | 'small'
     /**
     * Variant of the textfield.
     */
@@ -56,30 +56,30 @@ export interface SearchTerminatorProps {
     /**
     * Show or hide the results 
     */
-    showResults?: boolean,
+    showResults?: boolean
     /**
     * Placeholder Input
     */
-    placeholderInput?: string,
+    placeholderInput?: string
     /**
     * Classes of the input label
     */
-    inputLabelClasses?: string,
+    inputLabelClasses?: string
     /**
    * Classes of the input
    */
-    inputClasses?: string,
+    inputClasses?: string
     /**
     * StartAdornment content
     */
-    startAdornmentInput?: any,
+    startAdornmentInput?: any
     /**
     * EndAdornment content
     */
     endAdornmentInput?: any
 }
 
-const SearchTerminator = ({
+export const SearchTerminator = ({
     results = <>
         <Table aria-label="simple table">
             <TableBody>
@@ -251,7 +251,7 @@ const SearchTerminator = ({
                 </div>
             </div>
         </>
-    )
+    );
 };
 
 export default SearchTerminator;

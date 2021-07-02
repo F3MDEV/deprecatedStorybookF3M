@@ -33,7 +33,7 @@ export interface NavTabsProps {
   /**
    * Tabs indicator Color
    */
-  tabsIndicatorColor?: 'secondary' | 'primary' | string;
+  tabsIndicatorColor?: 'secondary' | 'primary' | undefined;
   /**
    * Disable the back button
    */
@@ -340,9 +340,8 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
       >
         <div className={`${styleClass.dFlex}`}>
           <ButtonBase
-            className={`${backButtonDisable ? styleClass.opacity50 : ''} ${
-              styleClass.pr3
-            } ${styleClass.prLg0} ${styleClass.mb2} ${styleClass.outlineNone}`}
+            className={`${backButtonDisable ? styleClass.opacity50 : ''} ${styleClass.pr3
+              } ${styleClass.prLg0} ${styleClass.mb2} ${styleClass.outlineNone}`}
             disableRipple
             disableTouchRipple
             focusRipple

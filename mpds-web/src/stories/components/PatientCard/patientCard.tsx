@@ -164,55 +164,55 @@ const PatientCard: FunctionComponent<PatientCardProps> = ({
         displayBlock: {
             display: "block"
         },
-        robotoBold:{
+        robotoBold: {
             fontFamily: "Roboto",
             fontWeight: 700
         },
-        robotoRegular:{
+        robotoRegular: {
             fontFamily: "Roboto",
             fontWeight: 400
         },
-        robotoThin:{
+        robotoThin: {
             fontFamily: "Roboto",
             fontWeight: 200
         },
-        mL3:{
+        mL3: {
             marginLeft: 10,
         },
-        mL2:{
+        mL2: {
             marginLeft: 5,
         },
-        m0:{
+        m0: {
             margin: 0,
         },
-        ml4:{
+        ml4: {
             marginLeft: 15,
         },
-        p0:{
+        p0: {
             padding: 0,
         },
-        pr1:{
+        pr1: {
             paddingRight: 2.5,
         },
-        pr2:{
+        pr2: {
             paddingRight: 5,
         },
-        pr3:{
+        pr3: {
             paddingRight: 10,
         },
-        pt4:{
+        pt4: {
             paddingTop: 15,
         },
-        pl5:{
+        pl5: {
             paddingLeft: 30,
         },
         textLeft: {
             textAlign: "left"
         },
-        textUppercase:{
+        textUppercase: {
             textTransform: "uppercase",
         },
-        myAuto:{
+        myAuto: {
             marginTop: "auto",
             marginBottom: "auto"
         },
@@ -236,29 +236,29 @@ const PatientCard: FunctionComponent<PatientCardProps> = ({
             boxShadow: "0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)",
             color: colorText as string
         },
-        flexTwo:{
+        flexTwo: {
             flex: 2,
         },
-        avatarIdCard:{
+        avatarIdCard: {
             width: 50,
             height: 50,
             minWidth: 49,
             minHeight: 49,
         },
-        fitPhoto:{
+        fitPhoto: {
             objectFit: "cover",
         },
-        roundedCircle:{
+        roundedCircle: {
             borderRadius: "50%"
         },
-        borderImageGrd:{
+        borderImageGrd: {
             border: "2px solid #DCDCDC"
         },
         listWoundsCard: {
             fontSize: 14,
             listStyle: "none",
         },
-        idCode:{
+        idCode: {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
@@ -274,8 +274,8 @@ const PatientCard: FunctionComponent<PatientCardProps> = ({
             boxOrient: "vertical",
             fontFamily: "Roboto"
         },
-        patientDetails:{
-            "& .MuiTypography-root":{
+        patientDetails: {
+            "& .MuiTypography-root": {
                 "&:nth-child(2), &:nth-child(3)": {
                     overflow: "hidden",
                     textOverflow: "ellipsis",
@@ -297,35 +297,35 @@ const PatientCard: FunctionComponent<PatientCardProps> = ({
     return (
         <>
             <Paper className={`${styleClass.idCard}`} onClick={selectPatient}>
-            <div>
-                <div className={`${styleClass.displayFlex} `}>
-                    <Image className={hasImage ? `${styleClass.myAuto} ${styleClass.avatarIdCard} ${styleClass.fitPhoto} ${styleClass.borderImageGrd}` : `${styleClass.myAuto} ${styleClass.avatarIdCard} ${styleClass.fitPhoto}`} roundedCircle
-                        src={hasImage ? idCardPhoto : PatientIcon}
-                    ></Image>
-                    <div className={`${styleClass.textLeft} ${styleClass.myAuto} ${styleClass.flexTwo} ${styleClass.mL3}`}>
-                        <div className={`${styleClass.displayFlex} ${styleClass.mL2}`}>
-                            <Box fontSize={14} className={`${styleClass.nameInfoCard} ${styleClass.displayBlock} ${styleClass.pr2} ${styleClass.m0}`}>
-                                {idCardName}
-                            </Box>
-                        </div>
-                        <div className={`${styleClass.mL2} ${styleClass.patientDetails} ${styleClass.displayFlex}`}>
-                            <Typography variant="body2" className={`${styleClass.fontWeightLight} ${styleClass.fontSizeTwelve} ${styleClass.m0} ${styleClass.pr3}`}>
-                                <span className={`${styleClass.robotoBold} ${styleClass.fontSizeTwelve} ${styleClass.pr1}`}>{idCardTypeDoc}</span>
-                                <span className={`${styleClass.fontSizeTwelve} ${styleClass.idCode} ${styleClass.pr1}`}>{idCardIdentification}</span>
-                            </Typography>
-                            <Typography variant="body2" className={`${styleClass.fontWeightLight} ${styleClass.fontSizeTwelve} ${styleClass.m0} ${styleClass.pr3}`}>
-                                <span className={`${styleClass.robotoBold} ${styleClass.fontSizeTwelve} ${styleClass.pr1}`}>{RoomCodeTopic}</span>
-                                <span className={`${styleClass.fontSizeTwelve}`}>{RoomCode}</span>
-                            </Typography>
-                            <Typography variant="body2" className={`${styleClass.fontWeightLight} ${styleClass.fontSizeTwelve} ${styleClass.m0}`}>
-                                <span className={`${styleClass.robotoBold} ${styleClass.fontSizeTwelve} ${styleClass.pr1}`}>{BedCodeTopic}</span>
-                                <span className={`${styleClass.fontSizeTwelve}`}>{BedCode}</span>
-                            </Typography>
+                <div>
+                    <div className={`${styleClass.displayFlex} `}>
+                        <Image className={hasImage ? `${styleClass.myAuto} ${styleClass.avatarIdCard} ${styleClass.fitPhoto} ${styleClass.borderImageGrd}` : `${styleClass.myAuto} ${styleClass.avatarIdCard} ${styleClass.fitPhoto}`} roundedCircle
+                            src={hasImage ? idCardPhoto : PatientIcon}
+                        ></Image>
+                        <div className={`${styleClass.textLeft} ${styleClass.myAuto} ${styleClass.flexTwo} ${styleClass.mL3}`}>
+                            <div className={`${styleClass.displayFlex} ${styleClass.mL2}`}>
+                                <Box fontSize={14} className={`${styleClass.nameInfoCard} ${styleClass.displayBlock} ${styleClass.pr2} ${styleClass.m0}`}>
+                                    {idCardName}
+                                </Box>
+                            </div>
+                            <div className={`${styleClass.mL2} ${styleClass.patientDetails} ${styleClass.displayFlex}`}>
+                                <Typography variant="body2" className={`${styleClass.fontWeightLight} ${styleClass.fontSizeTwelve} ${styleClass.m0} ${styleClass.pr3}`}>
+                                    <span className={`${styleClass.robotoBold} ${styleClass.fontSizeTwelve} ${styleClass.pr1}`}>{idCardTypeDoc}</span>
+                                    <span className={`${styleClass.fontSizeTwelve} ${styleClass.idCode} ${styleClass.pr1}`}>{idCardIdentification}</span>
+                                </Typography>
+                                <Typography variant="body2" className={`${styleClass.fontWeightLight} ${styleClass.fontSizeTwelve} ${styleClass.m0} ${styleClass.pr3}`}>
+                                    <span className={`${styleClass.robotoBold} ${styleClass.fontSizeTwelve} ${styleClass.pr1}`}>{RoomCodeTopic}</span>
+                                    <span className={`${styleClass.fontSizeTwelve}`}>{RoomCode}</span>
+                                </Typography>
+                                <Typography variant="body2" className={`${styleClass.fontWeightLight} ${styleClass.fontSizeTwelve} ${styleClass.m0}`}>
+                                    <span className={`${styleClass.robotoBold} ${styleClass.fontSizeTwelve} ${styleClass.pr1}`}>{BedCodeTopic}</span>
+                                    <span className={`${styleClass.fontSizeTwelve}`}>{BedCode}</span>
+                                </Typography>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className={`${styleClass.displayFlex}`}>
+                    <div className={`${styleClass.displayFlex}`}>
                         <div className={`${styleClass.mL3} ${styleClass.flexTwo} ${styleClass.myAuto} ${styleClass.textLeft}`}>
                             <div className={`${styleClass.displayFlex} ${styleClass.mL2} ${styleClass.patientDetails}`}>
                                 <Typography variant="body2" className={`${styleClass.fontSizeTwelve} ${styleClass.fontWeightLight} ${styleClass.m0}`}> <span className={`${styleClass.fontSizeTwelve} ${styleClass.fontWeightLight}`}>{/* {this.props.patient.PatientInfo.type} */} </span><span className={`${styleClass.fontSizeTwelve} ${styleClass.idCode}`}> {/* {this.props.patient.PatientInfo.identification} */}</span> {/* {listInternments.length > 0 ? <span className="px-1 font-size-12-px">|</span> : ""} */}</Typography>
@@ -365,7 +365,7 @@ const PatientCard: FunctionComponent<PatientCardProps> = ({
                         disableTouchRipple
                         focusRipple
                         onClick={clickedLink as any}
-                        >
+                    >
                         <Box
                             color={colorBottomLink}
                             fontSize={14}
@@ -378,6 +378,5 @@ const PatientCard: FunctionComponent<PatientCardProps> = ({
         </>
     )
 }
-
 
 export default PatientCard;
