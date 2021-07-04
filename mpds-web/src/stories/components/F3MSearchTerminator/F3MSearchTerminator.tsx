@@ -96,16 +96,16 @@ export const SearchTerminator = ({
     </>,
     aside,
     showFilters = true,
-    value = '',
+    /* value = '',
     color = 'primary',
     label = 'Search',
     size = 'small',
-    variantTextfield = 'outlined',
+    variantTextfield = 'outlined', */
     inputWidth = 700,
     backgroundColorInput,
     showEmptyStateSearch = false,
     showResults = false,
-    placeholderInput = "Search here!",
+    /* placeholderInput = "Search here!",
     inputLabelClasses,
     inputClasses,
     startAdornmentInput = (
@@ -122,7 +122,7 @@ export const SearchTerminator = ({
                 </IconButton>
             </InputAdornment>
         </>
-    )
+    ) */
 }: SearchTerminatorProps) => {
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -207,7 +207,7 @@ export const SearchTerminator = ({
 
     const classes = useStyles();
 
-    const inputProps = {
+  /*   const inputProps = {
         label,
         color,
         value,
@@ -224,7 +224,7 @@ export const SearchTerminator = ({
             startAdornment: startAdornmentInput,
             endAdornment: endAdornmentInput
         },
-    };
+    }; */
 
     return (
         <>
@@ -232,7 +232,7 @@ export const SearchTerminator = ({
                 <div className={`${classes.aside}`}>
                     {aside}
                 </div>
-                <TextField {...inputProps} />
+                <TextField /* {...inputProps}  */ />
 
                 <div hidden={!showResults} className={classes.inputAttachments}>
                     {results}
