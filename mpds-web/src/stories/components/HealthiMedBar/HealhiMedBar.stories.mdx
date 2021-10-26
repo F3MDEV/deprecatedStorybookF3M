@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import HealhiMedBar from './HealhiMedBar';
+
+<Meta
+  title='Components/HealhiMedBar'
+  component={HealhiMedBar}
+  parameters={{ layout: 'fullscreen' }}
+/>
+
+# HealhiMedBar
+
+Bottom bar ready to receive your elements! 😉 <br />
+Check the props! 👋 <br />
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <HealhiMedBar {...args} />;
+
+<Canvas>
+  <Story
+    name='HealhiMedBar'
+    args={{
+      majorButtons: (
+        <>
+          <Button
+            color='primary'
+            style={{
+              paddingRight: '1.5rem',
+              paddingLeft: '1.5rem',
+              marginRight: '0.5rem',
+              textTransform: 'uppercase'
+            }}
+          >
+            Delete
+          </Button>
+          <Button
+            color='primary'
+            variant='contained'
+            style={{
+              paddingRight: '1.5rem',
+              paddingLeft: '1.5rem',
+              marginRight: '0.5rem',
+              textTransform: 'uppercase'
+            }}
+          >
+            <img src={DuplicateIcon} style={{ marginRight: '0.5rem' }} />
+            Duplicate
+          </Button>
+        </>
+      ),
+      keyArea: 'Chave 16',
+      costArea: '5000€',
+      toolbarClasses
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
