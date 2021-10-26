@@ -24,27 +24,25 @@ export const Template = (args) => <StickyTopBar {...args} />;
     name='StickyTopBar'
     args={{
     barPosition: 'absolute',
-    headerContainerClasses: "w-100",
-    summaryContent: <div>
-      Who Cares.
-    </div>,
+    headerContainerClasses: 'w-100',
+    summaryContent: (<div> Who Cares. </div> ),
     isHealthiPatientSummaryActive : true,
-    healthiBadgePatientPhoto: <span className={`badge rounded-pill bg-danger`} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', zIndex: 1, bottom: -10, fontSize: '7px', textTransform: 'capitalize', width: '42px', maxHeight: '13px'}}>
+    healthiBadgePatientPhoto: (<span className={`badge rounded-pill bg-danger`} style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', zIndex: 1, bottom: -10, fontSize: '7px', textTransform: 'capitalize', width: '42px', maxHeight: '13px'}}>
         Inativo
-    </span>,
-    healthiPatientPhoto : 'https://www.looper.com/img/gallery/why-did-the-old-man-play-in-squid-game/l-intro-1633465995.jpg',
+    </span> ),
+    healthiPatientPhoto: 'https://www.looper.com/img/gallery/why-did-the-old-man-play-in-squid-game/l-intro-1633465995.jpg',
     healthiHandleErrorImg,
-    healthiPatientName : 'José Pereira Andrade',
-    healthiPatientAge : '92 anos',
-    healthiPatientSNS : '001',
+    healthiPatientName: 'José Pereira Andrade',
+    healthiPatientAge: '92 anos',
+    healthiPatientSNS: '001',
     healthiPatientEntity : ' Por definir',
-    healthiReportIcon : <ReportProblemIcon
+    healthiReportIcon: (<ReportProblemIcon
       id={'popoverbutton'}
       aria-owns={'mouse-over-popover'}
       aria-haspopup="true"
       className={`ms-4`}
-      style={{color: "#FF9800"}}></ReportProblemIcon>,
-    detailsContentOne : <div style={{display: 'grid', gridGap: 5, fontSize: 14, whiteSpace: 'nowrap', gridTemplateColumns: 'min-content auto min-content auto'}}>
+      style={{color: "#FF9800"}}></ReportProblemIcon> ),
+    detailsContentOne: ( <div style={{display: 'grid', gridGap: 5, fontSize: 14, whiteSpace: 'nowrap', gridTemplateColumns: 'min-content auto min-content auto'}}>
     <div className={`fw-bold`}>Nacionalidade</div>
     <div className={`ps-2`}>Portuguesa</div>
     <div className={`fw-bold`}>Nº de Beneficiário</div>
@@ -54,8 +52,8 @@ export const Template = (args) => <StickyTopBar {...args} />;
     <div className={`fw-bold`}>CESD</div>
     <div className={`ps-2`}>00000000012345678914</div>
 
-</div>,
-detailsContentSecond : <>
+</div> ),
+detailsContentSecond: <>
     <Typography variant="h6" style={{fontSize: '1rem'}} className={`fw-bold`}>
         Benefícios
     </Typography>
@@ -96,8 +94,8 @@ detailsContentThird : <>
         <span style={{fontStyle: 'italic'}}>Sem alergias.</span>
     </div>
     </>,
-    isDashedBoardSecondContentInserted = true,
-    isDashedBoardThirdContentInserted = true
+    isDashedBoardSecondContentInserted: true,
+    isDashedBoardThirdContentInserted: true
     }}
   >
     {Template.bind({})}

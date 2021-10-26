@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent } from 'react';
 /* import { withTranslation } from "react-i18next";
 import { connect } from "react-redux";
 import moment from 'moment'; */
@@ -10,12 +10,10 @@ import Box from '@material-ui/core/Box';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Image from 'react-bootstrap/Image';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 //CSS, STYLES & MEDIA ASSETS
-import logo_icon from '../../../utils/icon_MPDS.svg';
 import variables from '../../../assets/bootstrap/scss/_variables.scss';
 
 //ICONS

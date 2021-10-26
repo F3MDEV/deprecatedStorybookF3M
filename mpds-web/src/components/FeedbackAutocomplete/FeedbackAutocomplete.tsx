@@ -122,7 +122,7 @@ const FeedbackAutocomplete = ({
         id={id}
         includeInputInList={includeInputInList}
         options={options}
-        renderOption={(option) => {
+        renderOption={(option : any) => {
           return (showTooltip ?
             <div style={{width: '100%'}}>
               <Tooltip title={t(option.description).toString()} classes={classesTooltip} arrow placement='bottom'>
@@ -134,8 +134,8 @@ const FeedbackAutocomplete = ({
           );
         }} 
         classes={classes}
-        getOptionLabel={(option) => (option.name !== undefined ? option.name : '')}
-        renderInput={(params) => (
+        getOptionLabel={(option : any) => (option.name !== undefined ? option.name : '')}
+        renderInput={(params : any) => (
           <TextField
             {...params}
             variant='standard'
@@ -153,7 +153,7 @@ const FeedbackAutocomplete = ({
             required={required}
           />
         )}
-        getOptionSelected={(option, value) => {
+        getOptionSelected={(option : any, value: any) => {
           return option.name === value.name;
         }}
         value={value}

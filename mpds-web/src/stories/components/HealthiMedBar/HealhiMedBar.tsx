@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from "@material-ui/core";
 
 //ICONS
-import DuplicateIcon from './../src/duplicate.svg';
+import DuplicateIcon from './duplicate.svg';
 
 export interface HealthiMedBarProps {
     /**
