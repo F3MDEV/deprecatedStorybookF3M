@@ -1,12 +1,11 @@
+
+
 import * as React from 'react';
-import { IconButton, InputAdornment, makeStyles, Paper } from "@material-ui/core";
+import { makeStyles, Paper } from "@material-ui/core";
 import { Table, TableBody, TableRow, TableCell, Avatar } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import EmptyStateSearch from './componentAssets/emptyStateSearch';
 import TemplateFilters from './componentAssets/template-filter';
-
-import CloseIcon from '@material-ui/icons/Close';
-import SearchIcon from '@material-ui/icons/Search';
 
 export interface SearchTerminatorProps {
     /**
