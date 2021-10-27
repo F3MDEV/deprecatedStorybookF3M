@@ -33,7 +33,7 @@ export interface HealthiMedBarProps {
 const HealthiMedBar: FunctionComponent<HealthiMedBarProps> = ({
     majorButtons = <>
       <Button color="primary" style={{paddingRight: '1.5rem', paddingLeft: '1.5rem', marginRight: '0.5rem', textTransform: 'uppercase'}}>Delete</Button>
-      <Button color="primary" variant="contained" style={{paddingRight: '1.5rem', paddingLeft: '1.5rem', marginRight: '0.5rem', textTransform: 'uppercase'}}><img src={DuplicateIcon} style={{marginRight: '0.5rem'}}/>Duplicate</Button>
+      <Button color="primary" variant="contained" style={{paddingRight: '1.5rem', paddingLeft: '1.5rem', marginRight: '0.5rem', textTransform: 'uppercase'}}><img src={DuplicateIcon} style={{marginRight: '0.5rem'}} alt="Duplicate"/>Duplicate</Button>
     </>,
     keyArea = "Chave 16",
     costArea = "5000€",

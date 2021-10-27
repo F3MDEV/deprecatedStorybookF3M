@@ -1,5 +1,5 @@
 import 'date-fns';
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 
 // OUTSIDE COMPONENTS
 import { KeyboardDatePicker } from '@material-ui/pickers';
@@ -59,8 +59,6 @@ const DateCalendarField: React.FC<DateCalendarFieldProps> = ({
             maxDate={maxDate}
             autoOk={autoOk}
             invalidDateMessage={invalidDateMessage}
-
-
         />
     )
 }

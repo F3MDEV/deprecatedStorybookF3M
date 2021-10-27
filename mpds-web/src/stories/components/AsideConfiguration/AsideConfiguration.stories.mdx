@@ -2,11 +2,7 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { Props } from '@storybook/addon-docs/blocks';
 import AsideConfiguration from './AsideConfiguration';
 
-<Meta
-  title='Components/AsideConfiguration'
-  component={AsideConfiguration}
-  parameters={{ layout: 'fullscreen' }}
-/>
+<Meta title='Components/AsideConfiguration' component={AsideConfiguration} />
 
 # AsideConfiguration
 
@@ -20,12 +16,13 @@ Check the props! 👋 <br />
 export const Template = (args) => <AsideConfiguration {...args} />;
 
 <Canvas>
-  <Story name='AsideConfiguration' args={{
-      title: "Configuration",
-  buttonOneTitle: "One",
-  buttonTwoTitle: "Two",
-  buttonThreeTitle: "Three",
-  tabOne: "I'm inside.",
+  <Story name='AsideConfiguration'
+  args={{
+      title: 'Configuration',
+  buttonOneTitle: 'One',
+  buttonTwoTitle: 'Two',
+  buttonThreeTitle: 'Three',
+  tabOne: 'I'm inside.',
   tabTwo: '',
   tabThree: '',
   clickToogleBar: '',

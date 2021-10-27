@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "./static/css/main.270325b9.chunk.css",
+    "main.js": "./main.8c83333cf862fa6c6450.bundle.js",
+    "main.css.map": "./static/css/main.270325b9.chunk.css.map",
+    "main.js.map": "./main.8c83333cf862fa6c6450.bundle.js.map",
+    "runtime~main.js": "./runtime~main.8c83333cf862fa6c6450.bundle.js",
+    "runtime~main.js.map": "./runtime~main.8c83333cf862fa6c6450.bundle.js.map",
+    "vendors~main.css": "./static/css/vendors~main.f7798a08.chunk.css",
+    "vendors~main.js": "./vendors~main.8c83333cf862fa6c6450.bundle.js",
+    "vendors~main.css.map": "./static/css/vendors~main.f7798a08.chunk.css.map",
+    "vendors~main.js.map": "./vendors~main.8c83333cf862fa6c6450.bundle.js.map",
+    "iframe.html": "./iframe.html",
+    "precache-manifest.c122e4f5efa9c6f460ed5ddd6877c6f4.js": "./precache-manifest.c122e4f5efa9c6f460ed5ddd6877c6f4.js",
+    "service-worker.js": "./service-worker.js",
+    "static/media/account-circle.svg": "./static/media/account-circle.a8610e6f.svg",
+    "static/media/code-brackets.svg": "./static/media/code-brackets.d43eb968.svg",
+    "static/media/colors.svg": "./static/media/colors.8104e6f5.svg",
+    "static/media/comments.svg": "./static/media/comments.3f9a1398.svg",
+    "static/media/direction.svg": "./static/media/direction.d3dc567b.svg",
+    "static/media/duplicate.svg": "./static/media/duplicate.df04381e.svg",
+    "static/media/flow.svg": "./static/media/flow.e3812c4f.svg",
+    "static/media/index.css": "./static/media/roboto-condensed-latin-700italic.a8c91eca.woff",
+    "static/media/plugin.svg": "./static/media/plugin.5ba97e9b.svg",
+    "static/media/repo.svg": "./static/media/repo.3452b916.svg",
+    "static/media/stackalt.svg": "./static/media/stackalt.66f4b748.svg",
+    "vendors~main.8c83333cf862fa6c6450.bundle.js.LICENSE.txt": "./vendors~main.8c83333cf862fa6c6450.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.8c83333cf862fa6c6450.bundle.js",
+    "static/css/vendors~main.f7798a08.chunk.css",
+    "vendors~main.8c83333cf862fa6c6450.bundle.js",
+    "static/css/main.270325b9.chunk.css",
+    "main.8c83333cf862fa6c6450.bundle.js"
+  ]
+}

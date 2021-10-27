@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent } from 'react';
 //INSIDE COMPONENTS
-import ButtonUI from '@material-ui/core/Button';
+
 //OUTSIDE COMPONENTS
 //CSS, STYLES & MEDIA ASSETS
 import ButtonBase from '@material-ui/core/ButtonBase';
