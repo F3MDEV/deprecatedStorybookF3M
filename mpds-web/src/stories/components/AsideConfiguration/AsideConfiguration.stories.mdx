@@ -18,41 +18,42 @@ export const Template = (args) => <AsideConfiguration {...args} />;
 <Canvas>
   <Story name='AsideConfiguration'
   args={{
-      title: 'Configuration',
-  buttonOneTitle: 'One',
-  buttonTwoTitle: 'Two',
-  buttonThreeTitle: 'Three',
-  tabOne: 'I'm inside.',
-  tabTwo: '',
-  tabThree: '',
-  clickToogleBar: '',
-  clickTab: '',
-  isBarExtendedProp: true, 
-  tabs: <> <Button id={'buttonTabAside1'} style={{width: '100%', whiteSpace: "nowrap", fontFamily: 'Roboto Condensed', fontSize: 13, color: "#ffffff", backgroundColor: '#4CB3BA'}} onClick={clickTab}>{buttonOneTitle}</Button>
-      <Button id={'buttonTabAside2'} style={{width: '100%', whiteSpace: "nowrap", fontFamily: 'Roboto Condensed', fontSize: 13}} onClick={clickTab}>{buttonTwoTitle}</Button>
-      <Button id={'buttonTabAside3'} style={{width: '100%', fontFamily: 'Roboto Condensed', fontSize: 13, whiteSpace: 'nowrap'}} onClick={clickTab}>{buttonThreeTitle}</Button>
-    </>,
-  closedBarContent: ( <Button style={{minWidth: 34, minHeight: 34, width: 34,  height: 34, marginTop: 4}}  variant="contained" color="primary" href="#contained-buttons">
-      <AirplanemodeActiveIcon />
-    </Button> ),
-  openBarContent: (<Nav style={{flexDirection: "column", display: "flex", paddingLeft: 0, listStyle: "none", position: "relative", height: 'calc(100% - 51px)', width: '100%'}}> 
-  <Typography style={{textAlign: "left", paddingLeft: 10, paddingTop: 5, paddingBottom: 5, fontWeight: 700}}>
-    {title}
-  </Typography>
-  
-  <div>
-    <ButtonGroup style={{paddingLeft: 15, paddingRight: 15, width: "100%"}} color="primary" aria-label="outlined primary button group">
-      {tabs}
-    </ButtonGroup>
-  </div>
+    title: 'Configuration',
+    buttonOneTitle: 'One',
+    buttonTwoTitle: 'Two',
+    buttonThreeTitle: 'Three',
+    tabOne: 'I'm inside.',
+    tabTwo,
+    tabThree,
+    clickToogleBar,
+    clickTab,
+    isBarExtendedProp: true, 
+    tabs: <> <Button id={'buttonTabAside1'} style={{width: '100%', whiteSpace: "nowrap", fontFamily: 'Roboto Condensed', fontSize: 13, color: "#ffffff", backgroundColor: '#4CB3BA'}} onClick={clickTab}>{buttonOneTitle}</Button>
+        <Button id={'buttonTabAside2'} style={{width: '100%', whiteSpace: "nowrap", fontFamily: 'Roboto Condensed', fontSize: 13}} onClick={clickTab}>{buttonTwoTitle}</Button>
+        <Button id={'buttonTabAside3'} style={{width: '100%', fontFamily: 'Roboto Condensed', fontSize: 13, whiteSpace: 'nowrap'}} onClick={clickTab}>{buttonThreeTitle}</Button>
+      </>,
+    closedBarContent:( <Button style={{minWidth: 34, minHeight: 34, width: 34,  height: 34, marginTop: 4}}  variant="contained" color="primary" href="#contained-buttons">
+        <AirplanemodeActiveIcon />
+      </Button> ),
+    openBarContent: ( <Nav style={{flexDirection: "column", display: "flex", paddingLeft: 0, listStyle: "none", position: "relative", height: 'calc(100% - 51px)', width: '100%'}}> 
+    <Typography style={{textAlign: "left", paddingLeft: 10, paddingTop: 5, paddingBottom: 5, fontWeight: 700}}>
+      {title}
+    </Typography>
+    
+    <div>
+      <ButtonGroup style={{paddingLeft: 15, paddingRight: 15, width: "100%"}} color="primary" aria-label="outlined primary button group">
+        {tabs}
+      </ButtonGroup>
+    </div>
 
-  <div style={{overflow: 'auto', height: '100%'}}>
-    {tabOne}
-     {tabTwo}
-    {tabThree}
-  </div>
-</Nav>)
- }}>
+    <div style={{overflow: 'auto', height: '100%'}}>
+      {tabOne}
+      {tabTwo}
+      {tabThree}
+    </div>
+
+</Nav>
+ )}}>
     {Template.bind({})}
   </Story>
 </Canvas>

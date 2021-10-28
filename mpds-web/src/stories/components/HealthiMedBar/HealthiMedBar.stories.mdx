@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { Props } from '@storybook/addon-docs/blocks';
 import HealthiMedBar from './HealthiMedBar';
+import DuplicateIcon from './duplicate.svg';
 
 <Meta title='Components/HealthiMedBar' component={HealthiMedBar} />
 
@@ -47,8 +48,8 @@ export const Template = (args) => <HealthiMedBar {...args} />;
           </Button>
         </>
       ),
-      keyArea: 'Chave 16',
-      costArea: '5000€',
+      keyArea: <span>Chave 16</span>,
+      costArea: <span>5000€</span>,
       toolbarClasses: ''
     }}
   >
