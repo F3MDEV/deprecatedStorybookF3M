@@ -2,7 +2,7 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { Props } from '@storybook/addon-docs/blocks';
 import NavTabs from './NavTabs';
 
-<Meta title="Components/NavTabs" component={NavTabs}/>
+<Meta title='Components/NavTabs' component={NavTabs} />
 
 # Nav Tabs
 
@@ -12,28 +12,30 @@ MPDS based nav tabs with EditControls, mobile dropdown, tabs and previous sectio
 
 <Props />
 
-export const Template = (args) => <NavTabs {...args} />
+export const Template = (args) => <NavTabs {...args} />;
 
 <Canvas>
-  <Story name="NavTabs"
+  <Story
+    name='NavTabs'
     argTypes={{
       onChangeTabs: { action: 'You have just touched the tab!' },
       onClickToggleDropdown: { action: 'Toggled dropdown!' },
       onClickGoBack: { action: 'Going back!' },
       onClickCreate: { action: 'Created!' },
       onClickSave: { action: 'Saved!' },
-      onClickClear: { action: 'Cleared!' },
+      onClickClear: { action: 'Cleared!' }
     }}
     args={{
-      tabsIndicatorColor: "primary",
+      tabsIndicatorColor: 'primary',
       backButtonDisable: false,
-      editControlsRoot: "",
+      editControlsRoot: '',
       hiddenEditControls: false,
-      arrowToggleDropdownClasses: "",
-      toggleDropdownTitle: "Report",
-      hrefToggleDropdown: "/",
-      backButtonTitle: "Previous"
-    }}>
+      arrowToggleDropdownClasses: '',
+      toggleDropdownTitle: 'Report',
+      hrefToggleDropdown: '/',
+      backButtonTitle: 'Previous'
+    }}
+  >
     {Template.bind({})}
-   </Story>
+  </Story>
 </Canvas>

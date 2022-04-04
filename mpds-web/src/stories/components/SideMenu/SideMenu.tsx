@@ -18,7 +18,6 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Link from '@material-ui/core/Link';
-import PatientIcon from '@material-ui/icons/AccountCircle';
 
 export interface MenuSliderF3MProps {
   /**
@@ -30,7 +29,7 @@ export interface MenuSliderF3MProps {
    */
   userLinks?: Array<{
     classNames: string;
-    onClick: React.MouseEventHandler<any>;
+    onclick: React.MouseEventHandler<any>;
     name: string;
   }>;
   /**
@@ -273,12 +272,12 @@ export const MenuSliderF3M: FunctionComponent<MenuSliderF3MProps> = ({
   userLinks = [
     {
       classNames: '',
-      onClick: console.log('Click!'),
+      onclick: console.log('Click!'),
       name: 'Settings'
     },
     {
       classNames: '',
-      onClick: console.log('Click!'),
+      onclick: console.log('Click!'),
       name: 'Log Out'
     }
   ],
