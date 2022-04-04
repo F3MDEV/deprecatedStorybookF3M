@@ -18,10 +18,6 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Link from '@material-ui/core/Link';
-import PatientIcon from '@material-ui/icons/AccountCircle';
-import { BackgroundProperty } from '@material-ui/system/node_modules/csstype/index';
-
-import { PropsFunc } from '@material-ui/styles/withStyles/withStyles';
 
 export interface MenuSliderF3MProps {
   /**
@@ -33,7 +29,7 @@ export interface MenuSliderF3MProps {
    */
   userLinks?: Array<{
     classNames: string;
-    onClick: React.MouseEventHandler<any>;
+    onclick: React.MouseEventHandler<any>;
     name: string;
   }>;
   /**
@@ -276,12 +272,12 @@ export const MenuSliderF3M: FunctionComponent<MenuSliderF3MProps> = ({
   userLinks = [
     {
       classNames: '',
-      onClick: console.log('Click!'),
+      onclick: console.log('Click!'),
       name: 'Settings'
     },
     {
       classNames: '',
-      onClick: console.log('Click!'),
+      onclick: console.log('Click!'),
       name: 'Log Out'
     }
   ],
@@ -725,10 +721,10 @@ export const MenuSliderF3M: FunctionComponent<MenuSliderF3MProps> = ({
                     <ExpansionPanelDetails
                       className={`${styleClass.noPaddingY} ${styleClass.pb4} ${styleClass.pl5} ${styleClass.ml5} ${styleClass.flexColumn}`}
                     >
-                      {userLinks.map((item) => (
+                      {userLinks.map((item : any) => (
                         <Link
                           className={`${styleClass.underlineHover} ${styleClass.fontRoboto} ${item.classNames} ${styleClass.institutionItem} ${styleClass.dBlock} ${styleClass.py3} ${styleClass.cursorPointer}`}
-                          onClick={item.onClick}
+                          onClick={item.onclick}
                           color={userLinksColor}
                         >
                           {item.name}

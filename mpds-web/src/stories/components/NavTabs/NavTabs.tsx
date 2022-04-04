@@ -33,7 +33,7 @@ export interface NavTabsProps {
   /**
    * Tabs indicator Color
    */
-  tabsIndicatorColor?: 'secondary' | 'primary' | string;
+  tabsIndicatorColor?: 	'primary' | 'secondary';
   /**
    * Disable the back button
    */
@@ -104,7 +104,7 @@ const secondaryFont = variables.secondaryFont;
 
 const NavTabs: FunctionComponent<NavTabsProps> = ({
   onChangeTabs,
-  tabsIndicatorColor = 'primary',
+  tabsIndicatorColor = 'primary' as 'primary' | 'secondary',
   backButtonDisable = false,
   editControlsRoot,
   hiddenEditControls = false,
@@ -273,7 +273,7 @@ const NavTabs: FunctionComponent<NavTabsProps> = ({
 
   const styleClass = useStyles();
 
-  const CustomToggleInstitution = React.forwardRef(({ children /* onClick */ }, ref) => (
+  const CustomToggleInstitution = React.forwardRef(({ children }, ref) => (
     <a
       className={`${styleClass.textDecorationNone} ${styleClass.fontWeightBold} ${styleClass.dBlock}`}
       href={hrefToggleDropdown}
