@@ -616,16 +616,18 @@ export const MenuSliderF3M: FunctionComponent<MenuSliderF3MProps> = ({
                   <ClearIcon fontSize='large' />
                 </IconButton>
                 <List className={`${styleClass.root}`}>
-                  {sectionsItems.map((item: any) => (
-                    <ListItem
-                      button
-                      className={`${styleClass.py4}`}
-                      selected={selectedItemList}
-                    >
-                      <ListItemIcon>{item.icon}</ListItemIcon>
-                      <ListItemText primary={item.itemTitle} />
-                    </ListItem>
-                  ))}
+                  {
+                    (sectionsItems as any).map((item: any) => (
+                      <ListItem
+                        button
+                        className={`${styleClass.py4}`}
+                        selected={selectedItemList}
+                      >
+                        <ListItemIcon>{item.icon}</ListItemIcon>
+                        <ListItemText primary={item.itemTitle} />
+                      </ListItem>
+                    )) as any
+                  }
                 </List>
 
                 <div
@@ -660,17 +662,19 @@ export const MenuSliderF3M: FunctionComponent<MenuSliderF3MProps> = ({
                       >
                         {editLinkList}
                       </Link>
-                      {listOfLinks.map((item) => (
-                        <Fragment key={item.rowKey}>
-                          <Link
-                            className={`${styleClass.underlineHover} ${styleClass.cursorPointer} ${styleClass.fontWeightBold} ${styleClass.institutionItem} ${styleClass.py3} ${styleClass.breakText}`}
-                            key={item.rowKey}
-                            onClick={onClickLinkList}
-                          >
-                            {item.name}
-                          </Link>
-                        </Fragment>
-                      ))}
+                      {
+                        (listOfLinks as any).map((item: any) => (
+                          <Fragment key={item.rowKey}>
+                            <Link
+                              className={`${styleClass.underlineHover} ${styleClass.cursorPointer} ${styleClass.fontWeightBold} ${styleClass.institutionItem} ${styleClass.py3} ${styleClass.breakText}`}
+                              key={item.rowKey}
+                              onClick={onClickLinkList}
+                            >
+                              {item.name}
+                            </Link>
+                          </Fragment>
+                        )) as any
+                      }
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
 
@@ -721,15 +725,17 @@ export const MenuSliderF3M: FunctionComponent<MenuSliderF3MProps> = ({
                     <ExpansionPanelDetails
                       className={`${styleClass.noPaddingY} ${styleClass.pb4} ${styleClass.pl5} ${styleClass.ml5} ${styleClass.flexColumn}`}
                     >
-                      {userLinks.map((item : any) => (
-                        <Link
-                          className={`${styleClass.underlineHover} ${styleClass.fontRoboto} ${item.classNames} ${styleClass.institutionItem} ${styleClass.dBlock} ${styleClass.py3} ${styleClass.cursorPointer}`}
-                          onClick={item.onclick}
-                          color={userLinksColor}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                      {
+                        (userLinks as any).map((item: any) => (
+                          <Link
+                            className={`${styleClass.underlineHover} ${styleClass.fontRoboto} ${item.classNames} ${styleClass.institutionItem} ${styleClass.dBlock} ${styleClass.py3} ${styleClass.cursorPointer}`}
+                            onClick={item.onClick}
+                            color={userLinksColor}
+                          >
+                            {item.name}
+                          </Link>
+                        )) as any
+                      }
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
                 </div>

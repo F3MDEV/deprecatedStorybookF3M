@@ -501,30 +501,33 @@ export const VerticalNavBar: FunctionComponent<VerticalNavBarProps> = ({
             <Nav
               className={`${styleClass.myAuto} ${styleClass.navContainer} ${styleClass.WidthOneHundred}`}
             >
-              {sectionsItems.map((item: any) => (
-                <NavLink
-                  key={item.link}
-                  className={`${styleClass.navLinkSize} ${styleClass.dFlex} ${styleClass.WidthOneHundred}`}
-                  isActive={(match: any, location: { pathname: string }) => {
-                    let res = false;
-                    if (!match) {
-                      res = false;
-                    }
-                    if (
-                      location.pathname === item.link ||
-                      (location.pathname === '/PatientDetails' && item.link === '/wounds')
-                    ) {
-                      res = true;
-                    }
-                    return res;
-                  }}
-                  activeClassName={`${styleClass.selectedNavTab}`}
-                  to={item.link}
-                >
-                  {item.icon}
-                  {isBarExtended ? <ListItemIcon>{item.itemTitle}</ListItemIcon> : ''}
-                </NavLink>
-              ))}
+              {
+                (sectionsItems as any).map((item: any) => (
+                  <NavLink
+                    key={item.link}
+                    className={`${styleClass.navLinkSize} ${styleClass.dFlex} ${styleClass.WidthOneHundred}`}
+                    isActive={(match: any, location: { pathname: string }) => {
+                      let res = false;
+                      if (!match) {
+                        res = false;
+                      }
+                      if (
+                        location.pathname === item.link ||
+                        (location.pathname === '/PatientDetails' &&
+                          item.link === '/wounds')
+                      ) {
+                        res = true;
+                      }
+                      return res;
+                    }}
+                    activeClassName={`${styleClass.selectedNavTab}`}
+                    to={item.link}
+                  >
+                    {item.icon}
+                    {isBarExtended ? <ListItemIcon>{item.itemTitle}</ListItemIcon> : ''}
+                  </NavLink>
+                )) as any
+              }
             </Nav>
           </Navbar>
         </div>

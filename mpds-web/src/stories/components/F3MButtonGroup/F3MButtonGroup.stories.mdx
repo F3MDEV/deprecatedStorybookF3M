@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Props } from '@storybook/addon-docs/blocks';
+import F3MButtonGroup from './F3MButtonGroup';
+
+<Meta title="Components/F3MButtonGroup" component={F3MButtonGroup}/>
+
+# F3MButtonGroup
+
+
+## Component API
+
+<Props />
+
+export const Template = (args) => <F3MButtonGroup {...args} />
+
+<Canvas>
+  <Story
+    name="F3MButtonGroup"
+    argTypes={{
+        onClick: { action: 'Clicked' }
+    }}
+    args={{
+        content: [1,2],
+        size: "small",
+        color: "primary",
+        height: "27px",
+        borderRadius: "25px"
+    }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>
