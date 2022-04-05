@@ -27,11 +27,11 @@ import LoadingModal from '../../components/Loadings/LoadingModal'
 import StickySearch from './Filters/StickySearch/StickySearch'
 import StickyFilter from './Filters/StickyFilters/StickyFilter'
 //OUTSIDE COMPONENTS
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { Typography } from "@material-ui/core";
-import PatientCard from '../../components/patientCard/patientCard'
+import PatientCard from '../../components/patientCard/PatientCard.tsx';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';

@@ -13,7 +13,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'react-bootstrap/Image';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
-
+ 
 //CSS, STYLES & MEDIA ASSETS
 import logo_icon from '../../../utils/icon_MPDS.svg';
 import variables from '../../../assets/bootstrap/scss/_variables.scss';

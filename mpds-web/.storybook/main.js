@@ -18,8 +18,8 @@ module.exports = {
   ],
 }
 
-module.exports = {
+/* module.exports = {
   typescript: {
     check: false
   },
-};
+}; */
